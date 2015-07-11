@@ -9993,3 +9993,18 @@ Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-06-28 17:00:14 +1000
+
+
+Started GET "/" for ::1 at 2015-07-11 12:43:42 +1000
+Processing by WelcomeController#home as HTML
+  Rendered welcome/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 315ms (Views: 306.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-11 12:43:42 +1000
+Processing by WelcomeController#home as HTML
+  Rendered welcome/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 71ms (Views: 71.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-11 12:43:43 +1000
