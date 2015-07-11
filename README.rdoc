@@ -1,28 +1,16 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Back End Web Development
+Project Brief
+Rahul Bose
 
-Things you may want to cover:
+This README outlines a project brief for a Fantasy Formula One Website. The website will allow users to compete with each other based on real world Formula One race results. The website will update the latest Formula One Race & Qualifying results from a REST-ful API, and update the results into a results database. Users will receive points from these race results based on their choice of driver/teams.
 
-* Ruby version
+The user will have functionality such as:
 
-* System dependencies
+* Able to make choices of drivers/teams and score points from a subset of competition bonuses. For example, Top 10 Finishers, Bonus Points for particular driver performance, eg. Qualifying bonus, Fastest through Speed trap, Biggest mover at the end of the race etc.
+* Be able to review historic statistics of an upcoming race.
+* Be able to see the Betting Odds for an upcoming race.
+* Be able to create a League of Friends.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Godspeed...
