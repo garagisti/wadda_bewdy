@@ -10179,3 +10179,25 @@ Migrating to CreateConstructors (20150712061220)
   [1m[35mDriver Load (0.2ms)[0m  SELECT "drivers".* FROM "drivers"
   [1m[36mDriver Load (0.2ms)[0m  [1mSELECT  "drivers".* FROM "drivers"  ORDER BY "drivers"."id" DESC LIMIT 1[0m
   [1m[35mConstructor Load (0.1ms)[0m  SELECT  "constructors".* FROM "constructors" WHERE "constructors"."id" = ? LIMIT 1  [["id", 4]]
+
+
+Started GET "/" for ::1 at 2015-07-17 09:54:40 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#home as HTML
+  Rendered welcome/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 255ms (Views: 245.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-cbe212698df2a0cc33b75e57e05580c6541066a5627eaf68daaa2f2d73bb0204.css?body=1" for ::1 at 2015-07-17 09:54:40 +1000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-17 09:54:40 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-17 09:54:40 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-17 09:54:40 +1000
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-17 09:54:40 +1000
