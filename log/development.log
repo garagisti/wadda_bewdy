@@ -10086,3 +10086,96 @@ Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323
 
 
 Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-11 18:24:41 +1000
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDrivers (20150712051019)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "drivers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "number" integer NOT NULL, "constructor_id" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150712051019"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateConstructors (20150712051212)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "constructors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "engine" varchar NOT NULL, "driver_1_id" integer NOT NULL, "driver_2_id" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150712051212"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDrivers (20150712051019)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "drivers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "number" integer NOT NULL, "constructor_id" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150712051019"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateConstructors (20150712061220)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "constructors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "engine" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150712061220"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDrivers (20150712051019)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "drivers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "number" integer NOT NULL, "constructor_id" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150712051019"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateConstructors (20150712061220)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "constructors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "engine" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150712061220"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "constructors" ("name", "engine", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ferrari"], ["engine", "Ferrari"], ["created_at", "2015-07-12 06:29:19.385364"], ["updated_at", "2015-07-12 06:29:19.385364"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "constructors" ("name", "engine", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Mercedes"], ["engine", "Mercedes"], ["created_at", "2015-07-12 06:29:19.390123"], ["updated_at", "2015-07-12 06:29:19.390123"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "constructors" ("name", "engine", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Red Bull"], ["engine", "Renault"], ["created_at", "2015-07-12 06:29:19.392674"], ["updated_at", "2015-07-12 06:29:19.392674"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "constructors" ("name", "engine", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Force India"], ["engine", "Mercedes"], ["created_at", "2015-07-12 06:29:19.394797"], ["updated_at", "2015-07-12 06:29:19.394797"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "drivers" ("name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sebastian Vettel"], ["number", 5], ["constructor_id", 1], ["created_at", "2015-07-12 06:29:19.409864"], ["updated_at", "2015-07-12 06:29:19.409864"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "drivers" ("name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Kimi Raikkonen"], ["number", 7], ["constructor_id", 1], ["created_at", "2015-07-12 06:29:19.411868"], ["updated_at", "2015-07-12 06:29:19.411868"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "drivers" ("name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Lewis Hamilton"], ["number", 44], ["constructor_id", 2], ["created_at", "2015-07-12 06:29:19.413584"], ["updated_at", "2015-07-12 06:29:19.413584"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "drivers" ("name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Nico Rosberg"], ["number", 6], ["constructor_id", 2], ["created_at", "2015-07-12 06:29:19.415187"], ["updated_at", "2015-07-12 06:29:19.415187"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "drivers" ("name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Daniel Ricciardo"], ["number", 3], ["constructor_id", 3], ["created_at", "2015-07-12 06:29:19.416856"], ["updated_at", "2015-07-12 06:29:19.416856"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "drivers" ("name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Daniil Kyvat"], ["number", 26], ["constructor_id", 3], ["created_at", "2015-07-12 06:29:19.418457"], ["updated_at", "2015-07-12 06:29:19.418457"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "drivers" ("name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Nico Hulkenberg"], ["number", 27], ["constructor_id", 4], ["created_at", "2015-07-12 06:29:19.420214"], ["updated_at", "2015-07-12 06:29:19.420214"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "drivers" ("name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Sergio Perez"], ["number", 11], ["constructor_id", 4], ["created_at", "2015-07-12 06:29:19.421777"], ["updated_at", "2015-07-12 06:29:19.421777"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[36mConstructor Load (0.2ms)[0m  [1mSELECT "constructors".* FROM "constructors"[0m
+  [1m[35mConstructor Load (0.1ms)[0m  SELECT  "constructors".* FROM "constructors"  ORDER BY "constructors"."id" ASC LIMIT 1
+  [1m[36mConstructor Load (0.2ms)[0m  [1mSELECT  "constructors".* FROM "constructors"  ORDER BY "constructors"."id" ASC LIMIT 1[0m
+  [1m[35mConstructor Load (0.2ms)[0m  SELECT  "constructors".* FROM "constructors"  ORDER BY "constructors"."id" ASC LIMIT 1
+  [1m[36mDriver Load (0.3ms)[0m  [1mSELECT "drivers".* FROM "drivers" WHERE "drivers"."constructor_id" = ?[0m  [["constructor_id", 1]]
+  [1m[35mDriver Load (0.2ms)[0m  SELECT  "drivers".* FROM "drivers"  ORDER BY "drivers"."id" ASC LIMIT 1
+  [1m[36mConstructor Load (0.2ms)[0m  [1mSELECT  "constructors".* FROM "constructors" WHERE "constructors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mDriver Load (0.2ms)[0m  SELECT "drivers".* FROM "drivers"
+  [1m[36mDriver Load (0.2ms)[0m  [1mSELECT  "drivers".* FROM "drivers"  ORDER BY "drivers"."id" DESC LIMIT 1[0m
+  [1m[35mConstructor Load (0.1ms)[0m  SELECT  "constructors".* FROM "constructors" WHERE "constructors"."id" = ? LIMIT 1  [["id", 4]]
