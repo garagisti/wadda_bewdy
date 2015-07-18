@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>WaddaBewdy</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <head>
+    <title>WaddaBewdy</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
 
-  <%= google_webfonts_init({
-    google: ['Roboto Slab', 'Roboto', 'Montserrat', 'Kaushan Script', 'Droid Serif']
-  }) %>
+      <%= google_webfonts_init({
+        google: ['Roboto Slab', 'Roboto', 'Montserrat', 'Kaushan Script', 'Droid Serif']
+      }) %>
+  </head>
+  <body id="page-top" class="index">
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to 'Wadda Bewdy', root_path, class: "navbar-brand" %>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+              Login or Logout
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-
-</head>
-<body id="page-top" class="index">
-
-<%= yield %>
-
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+      <!-- <div class="sidebar"> -->
+        <ul class="nav nav-sidebar">
+          <li>My Tips</li>
+          <li>League Results</li>
+        </ul>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <%= render 'shared/flash' %>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

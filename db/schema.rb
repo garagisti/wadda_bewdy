@@ -11,11 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150712061220) do
+ActiveRecord::Schema.define(version: 20150718010412) do
+
+  create_table "circuits", force: :cascade do |t|
+    t.string   "ergast_circuit_code"
+    t.string   "name"
+    t.string   "locality"
+    t.string   "country"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
 
   create_table "constructors", force: :cascade do |t|
     t.string   "name",       null: false
-    t.string   "engine",     null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -27,5 +35,59 @@ ActiveRecord::Schema.define(version: 20150712061220) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
+
+  create_table "qly_results", force: :cascade do |t|
+    t.string   "qly_result_1", null: false
+    t.string   "qly_result_2", null: false
+    t.string   "qly_result_3", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "race_results", force: :cascade do |t|
+    t.string   "race_result_1",  null: false
+    t.string   "race_result_2",  null: false
+    t.string   "race_result_3",  null: false
+    t.string   "race_result_4",  null: false
+    t.string   "race_result_5",  null: false
+    t.string   "race_result_6",  null: false
+    t.string   "race_result_7",  null: false
+    t.string   "race_result_8",  null: false
+    t.string   "race_result_9",  null: false
+    t.string   "race_result_10", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "rounds", force: :cascade do |t|
+    t.string   "round_number"
+    t.integer  "circuit_id"
+    t.date     "qly_date"
+    t.date     "race_date"
+    t.time     "qly_time"
+    t.time     "race_time"
+    t.integer  "qly_results_id"
+    t.integer  "race_results_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

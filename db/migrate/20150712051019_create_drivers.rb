@@ -3,7 +3,7 @@ class CreateDrivers < ActiveRecord::Migration
     create_table :drivers do |t|
       t.string :name, null: false
       t.integer :number, null: false
-      t.integer :constructor_id, null: falsew
+      t.integer :constructor_id, null: false
 
       t.timestamps null: false
     end

@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <h1 class="page-header">F1 2015 Rounds Table</h1>
+  <p>Lists the rounds of the 2015 season and tips to date</p>
+
+  <div class="table-responsive">
+    <table class="table table-striped" role="grid">
+      <thead>
+        <tr>
+          <th>Round no</th>
+          <th>Circuit Name</th>
+          <th>City</th>
+          <th>Country</th>
+          <th>Pole Position</th>
+          <th>Race Winner</th>
+          <th>Tips Entered?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @rounds.each do |round| %>
+          <tr>
+            <td><%= round.round_number %></td>
+            <td><%= round.circuit.name %></td>
+            <td><%= round.circuit.locality %></td>
+            <td><%= round.circuit.country %></td>
+            <td>TBA</td>
+            <td>TBA</td>
+            <td>TBA</td>
+          </tr>
+          <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
