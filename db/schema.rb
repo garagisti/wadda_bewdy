@@ -23,20 +23,25 @@ ActiveRecord::Schema.define(version: 20150718010412) do
   end
 
   create_table "constructors", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "ergast_constructor_code"
+    t.string   "name",                    null: false
+    t.string   "nationality",             null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "drivers", force: :cascade do |t|
-    t.string   "name",           null: false
-    t.integer  "number",         null: false
-    t.integer  "constructor_id", null: false
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "ergast_driver_id",   null: false
+    t.string   "ergast_driver_code", null: false
+    t.string   "name",               null: false
+    t.integer  "number",             null: false
+    t.integer  "constructor_id",     null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "qly_results", force: :cascade do |t|
+    t.string   "round_id",     null: false
     t.string   "qly_result_1", null: false
     t.string   "qly_result_2", null: false
     t.string   "qly_result_3", null: false
@@ -45,16 +50,17 @@ ActiveRecord::Schema.define(version: 20150718010412) do
   end
 
   create_table "race_results", force: :cascade do |t|
-    t.string   "race_result_1",  null: false
-    t.string   "race_result_2",  null: false
-    t.string   "race_result_3",  null: false
-    t.string   "race_result_4",  null: false
-    t.string   "race_result_5",  null: false
-    t.string   "race_result_6",  null: false
-    t.string   "race_result_7",  null: false
-    t.string   "race_result_8",  null: false
-    t.string   "race_result_9",  null: false
-    t.string   "race_result_10", null: false
+    t.string   "round_id",       null: false
+    t.string   "race_result_1"
+    t.string   "race_result_2"
+    t.string   "race_result_3"
+    t.string   "race_result_4"
+    t.string   "race_result_5"
+    t.string   "race_result_6"
+    t.string   "race_result_7"
+    t.string   "race_result_8"
+    t.string   "race_result_9"
+    t.string   "race_result_10"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
@@ -62,10 +68,8 @@ ActiveRecord::Schema.define(version: 20150718010412) do
   create_table "rounds", force: :cascade do |t|
     t.string   "round_number"
     t.integer  "circuit_id"
-    t.date     "qly_date"
-    t.date     "race_date"
-    t.time     "qly_time"
-    t.time     "race_time"
+    t.datetime "qly_datetime"
+    t.datetime "race_datetime"
     t.integer  "qly_results_id"
     t.integer  "race_results_id"
     t.datetime "created_at",      null: false

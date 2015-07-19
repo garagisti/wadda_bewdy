@@ -4,10 +4,8 @@ class CreateRounds < ActiveRecord::Migration
 
       t.string  :round_number
       t.integer :circuit_id
-      t.date    :qly_date
-      t.date    :race_date
-      t.time    :qly_time
-      t.time    :race_time
+      t.datetime :qly_datetime
+      t.datetime :race_datetime
       t.integer :qly_results_id
       t.integer :race_results_id
 

@@ -1,6 +1,7 @@
 class CreateQlyResults < ActiveRecord::Migration
   def change
     create_table :qly_results do |t|
+      t.string :round_id, null: false
       t.string :qly_result_1, null: false
       t.string :qly_result_2, null: false
       t.string :qly_result_3, null: false
