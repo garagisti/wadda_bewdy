@@ -198,8 +198,9 @@ namespace :api_dl do
                       qly_result_3: third)
   end
 
-  def update_round_table()
+  def update_round_table(round, qly_result_id, race_result_id)
     # Get the round in question
+    rdr = Round.where(round_number: round)
     # update the record for race details
     # update the record for qualy details
   end

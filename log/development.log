@@ -16785,3 +16785,3050 @@ Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-19 22:24:30 +1000
   [1m[35m (0.2ms)[0m  begin transaction
   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "race_results" ("round_id", "race_result_1", "race_result_2", "race_result_3", "race_result_4", "race_result_5", "race_result_6", "race_result_7", "race_result_8", "race_result_9", "race_result_10", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["round_id", "1"], ["race_result_1", "HAM"], ["race_result_2", "ROS"], ["race_result_3", "VET"], ["race_result_4", "MAS"], ["race_result_5", "NAS"], ["race_result_6", "RIC"], ["race_result_7", "HUL"], ["race_result_8", "ERI"], ["race_result_9", "SAI"], ["race_result_10", "PER"], ["created_at", "2015-07-19 12:37:55.466429"], ["updated_at", "2015-07-19 12:37:55.466429"]]
   [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36mRaceResult Load (0.9ms)[0m  [1mSELECT  "race_results".* FROM "race_results"  ORDER BY "race_results"."id" ASC LIMIT 1[0m
+  [1m[35mRound Load (0.2ms)[0m  SELECT  "rounds".* FROM "rounds"  ORDER BY "rounds"."id" ASC LIMIT 1
+  [1m[36mRound Load (0.3ms)[0m  [1mSELECT "rounds".* FROM "rounds" WHERE "rounds"."round_number" = ?[0m  [["round_number", "2"]]
+  [1m[35mRound Load (0.1ms)[0m  SELECT "rounds".* FROM "rounds" WHERE "rounds"."round_number" = ?  [["round_number", "1"]]
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "rounds" SET qly_results_id: '1', race_results_id: '1' WHERE "rounds"."round_number" = ?[0m  [["round_number", "1"]]
+SQLite3::SQLException: unrecognized token: ":": UPDATE "rounds" SET qly_results_id: '1', race_results_id: '1' WHERE "rounds"."round_number" = ?
+
+
+Started GET "/rounds" for ::1 at 2015-07-20 21:00:24 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RoundsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRound Load (0.2ms)[0m  [1mSELECT "rounds".* FROM "rounds"[0m
+  [1m[35mCircuit Load (0.5ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (29.9ms)
+  Rendered shared/_flash.html.erb (0.4ms)
+Completed 200 OK in 309ms (Views: 281.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:00:25 +1000
+
+
+Started GET "/" for ::1 at 2015-07-20 21:00:25 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.4ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 126ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:00:25 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 96ms (Views: 95.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-20 21:00:25 +1000
+
+
+Started GET "/" for ::1 at 2015-07-20 21:00:29 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 100ms (Views: 99.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:00:30 +1000
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-20 21:00:30 +1000
+
+
+Started GET "/rounds" for ::1 at 2015-07-20 21:00:31 +1000
+Processing by RoundsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRound Load (0.1ms)[0m  SELECT "rounds".* FROM "rounds"
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (7.9ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 106.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:00:31 +1000
+
+
+Started GET "/rounds" for ::1 at 2015-07-20 21:07:47 +1000
+Processing by RoundsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRound Load (0.1ms)[0m  [1mSELECT "rounds".* FROM "rounds"[0m
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (6.3ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 170ms (Views: 167.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/rounds.self-49277974703c1ef051cf78322e5b6f222391c87ae98891f9806896cc37c82f13.css?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:07:47 +1000
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-07-20 21:07:54 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MKZnNkr8aMZDK97aVjVdVpBrkD4E0Xkxt1OZq2mA/f3LGQU4131Ss9Zloz9w4gR+TbUNz9xZFvCIzxgelHxYCg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:07:54 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 87ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-20 21:07:54 +1000
+
+
+Started GET "/" for ::1 at 2015-07-20 21:08:04 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 98.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/rounds.self-49277974703c1ef051cf78322e5b6f222391c87ae98891f9806896cc37c82f13.css?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:08:04 +1000
+
+
+Started GET "/" for ::1 at 2015-07-20 21:08:13 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 91ms (Views: 90.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:08:13 +1000
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-20 21:08:13 +1000
+
+
+Started GET "/rounds" for ::1 at 2015-07-20 21:08:14 +1000
+Processing by RoundsController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:08:14 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.8ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 120ms (Views: 117.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:08:15 +1000
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-20 21:08:15 +1000
+
+
+Started GET "/users/sign_up" for ::1 at 2015-07-20 21:08:30 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (2.3ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 86ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-07-20 21:08:47 +1000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vUW4j4tYF0CHxqqr9FfINVtFuxi8vTNohQSI/VfI8/S+sjQsu6Nyk8kIdWmhSkp57I+iPbuIFgxDoV0nwz8P1A==", "user"=>{"email"=>"schu82@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'schu82@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered devise/shared/_links.html.erb (0.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (2.0ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 229ms (Views: 148.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:08:53 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 94ms (Views: 93.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-07-20 21:09:08 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"++e8Z2Y5G2caPZ73MebMISi01H92pDHCQXGbzdXYF4X4EDDEVsJ+tFTzQTVk+05tn37NWnGRFKaH1E4XQS/rpQ==", "user"=>{"email"=>"schu82@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "schu82@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2015-07-20 11:09:08.726326"], ["sign_in_count", 2], ["updated_at", "2015-07-20 11:09:08.727184"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/rounds
+Completed 302 Found in 73ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/rounds" for ::1 at 2015-07-20 21:09:08 +1000
+Processing by RoundsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRound Load (0.2ms)[0m  SELECT "rounds".* FROM "rounds"
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCircuit Load (0.2ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (9.6ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 96.5ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-07-20 21:09:20 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OOf8R3DtPekG2rM7ox8HxQ2LCxr2AbqAeNs0H/Qiqgym0MRZfOovSoWbyG5sefd/ZFFDlzqE833IxzxZWVD+Nw=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:09:20 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 97ms (Views: 96.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:09:24 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 81ms (Views: 80.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/rounds.self-49277974703c1ef051cf78322e5b6f222391c87ae98891f9806896cc37c82f13.css?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:09:24 +1000
+
+
+Started GET "/" for ::1 at 2015-07-20 21:11:28 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 93ms (Views: 92.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/rounds.self-49277974703c1ef051cf78322e5b6f222391c87ae98891f9806896cc37c82f13.css?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:11:28 +1000
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:11:30 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 91ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-07-20 21:11:41 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yWhcOArvhUHtzplmg1vDgKUBmVP8kuA/BU49gM0omNJJFJj8QrzTLTsFwRPVhrF92usvOA+XDYUZ8jlUddZghg==", "user"=>{"email"=>"schu82@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "schu82@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-07-20 11:09:08.726326"], ["current_sign_in_at", "2015-07-20 11:11:41.522947"], ["sign_in_count", 3], ["updated_at", "2015-07-20 11:11:41.523684"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 73ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:11:41 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    45:                     </li>
+    46:                     <li>
+    47:                         <% if user_signed_in? %>
+    48:                             <%= link_to @user.email, destroy_user_session_path, method: :delete %>
+    49:                         <% else %>
+    50:                             <%= link_to 'Login', new_user_session_path %>
+    51:                       <% end %>
+  app/views/layouts/welcome.html.erb:48:in `_app_views_layouts_welcome_html_erb__3298229943124209960_70341244429020'
+
+
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (25.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+
+
+Started GET "/" for ::1 at 2015-07-20 21:12:49 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    45:                     </li>
+    46:                     <li>
+    47:                         <% if user_signed_in? %>
+    48:                             <%= link_to @user.email, destroy_user_session_path, method: :delete %>
+    49:                         <% else %>
+    50:                             <%= link_to 'Login', new_user_session_path %>
+    51:                       <% end %>
+  app/views/layouts/welcome.html.erb:48:in `_app_views_layouts_welcome_html_erb__3298229943124209960_70341244429020'
+
+
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (17.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:13:06 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    45:                     </li>
+    46:                     <li>
+    47:                         <% if user_signed_in? %>
+    48:                             <%= link_to @user.email, destroy_user_session_path, method: :delete %>
+    49:                         <% else %>
+    50:                             <%= link_to 'Login', new_user_session_path %>
+    51:                       <% end %>
+  app/views/layouts/welcome.html.erb:48:in `_app_views_layouts_welcome_html_erb__3298229943124209960_70341244429020'
+
+
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (17.7ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:14:05 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.2ms)
+Completed 200 OK in 140ms (Views: 139.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:14:06 +1000
+
+
+Started GET "/" for ::1 at 2015-07-20 21:14:08 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 99.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:14:08 +1000
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-07-20 21:14:10 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aX+ri7lIHUvjUOuA3GLAz0bGlH/6VtkZAa+ATyurpDa4jwlNSSmmYRMjUjcCI0hdBimGuWQup2KT++62TxCDLA=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:14:10 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 139.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:14:12 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 94.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:14:13 +1000
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:14:17 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 94ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:14:22 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1.9ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 127ms (Views: 125.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:14:47 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 101ms (Views: 100.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:14:47 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:14:48 +1000
+
+
+Started GET "/users/sign_up" for ::1 at 2015-07-20 21:14:51 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (1.5ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 94ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-07-20 21:14:54 +1000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W9YWa6b6lmm0Ef3HsZmBLJVfPEyLfPe30N6rzCzLOmLmPYN+SA6aDpFB+8lriQT+3ozPVnIw2UcJc9FsfEm2/Q==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (2.2ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 100.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:15:06 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 139ms (Views: 138.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:15:09 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 102.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-07-20 21:15:18 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T0lI14Puh7iaN2kLJQ6+Ad2gOhr9HE64oJ64UUDEODbyot3CbRqL379nbwX/HjvTlnPJAARQYEh5M8LxEEa0qQ==", "user"=>{"email"=>"schu82@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "schu82@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-07-20 11:11:41.522947"], ["current_sign_in_at", "2015-07-20 11:15:18.079241"], ["sign_in_count", 4], ["updated_at", "2015-07-20 11:15:18.079966"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:15:18 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 90ms (Views: 89.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:15:20 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.0ms)
+Completed 200 OK in 102ms (Views: 101.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:15:20 +1000
+
+
+Started GET "/" for ::1 at 2015-07-20 21:23:18 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 94.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:23:18 +1000
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:23:30 +1000
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:23:30 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.5ms)
+Completed 200 OK in 142ms (Views: 141.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-07-20 21:23:34 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6Nar/P27dj0IPlFC1jsahl+aJ4D6SZ84zaxBzEeBuB5BDaaKMEqp/MYBLPXaErlpjAE/4ngswMSovR+iu5/xWg=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:23:34 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.2ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 83ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:23:36 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 108.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:23:36 +1000
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:23:37 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (1.9ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial shared/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates"
+  * "/Users/garagisti/workspace/wadda_bewdy/app/views"
+  * "/Users/garagisti/.rvm/gems/ruby-2.1.5/gems/twitter-bootstrap-rails-3.2.0/app/views"
+  * "/Users/garagisti/.rvm/gems/ruby-2.1.5/gems/devise-3.5.1/app/views"
+):
+     7:   <%= csrf_meta_tags %>
+     8: </head>
+     9: <body>
+    10:   <%= render partial: 'shared/nav' %>
+    11:   <%= render partial: 'layouts/devise/container' %>
+    12: </body>
+    13: </html>
+  app/views/layouts/devise/sessions.html.erb:10:in `_app_views_layouts_devise_sessions_html_erb__4150231802385647861_70341198328720'
+
+
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (9.1ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (24.9ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:23:38 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (2.2ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial shared/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates"
+  * "/Users/garagisti/workspace/wadda_bewdy/app/views"
+  * "/Users/garagisti/.rvm/gems/ruby-2.1.5/gems/twitter-bootstrap-rails-3.2.0/app/views"
+  * "/Users/garagisti/.rvm/gems/ruby-2.1.5/gems/devise-3.5.1/app/views"
+):
+     7:   <%= csrf_meta_tags %>
+     8: </head>
+     9: <body>
+    10:   <%= render partial: 'shared/nav' %>
+    11:   <%= render partial: 'layouts/devise/container' %>
+    12: </body>
+    13: </html>
+  app/views/layouts/devise/sessions.html.erb:10:in `_app_views_layouts_devise_sessions_html_erb__4150231802385647861_70341198328720'
+
+
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (18.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:25:23 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (1.7ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered layouts/devise/_container.html.erb (0.9ms)
+Completed 200 OK in 88ms (Views: 86.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:25:23 +1000
+
+
+Started POST "/users/sign_in" for ::1 at 2015-07-20 21:25:38 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"macNEVKfyfQElrb13vBXisbhmHBXtyzQI4+9oL0mahux1iR78F5ZhRF/2OjHVJSH2S8zVulIpeDbYbTZSR0FDg==", "user"=>{"email"=>"schu82@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "schu82@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-07-20 11:15:18.079241"], ["current_sign_in_at", "2015-07-20 11:25:38.978204"], ["sign_in_count", 5], ["updated_at", "2015-07-20 11:25:38.979404"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:25:38 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 83ms (Views: 82.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:25:40 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 105.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:25:40 +1000
+
+
+Started GET "/" for ::1 at 2015-07-20 21:25:45 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 124ms (Views: 123.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:25:45 +1000
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-20 21:25:45 +1000
+
+
+Started GET "/rounds" for ::1 at 2015-07-20 21:25:46 +1000
+Processing by RoundsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRound Load (0.2ms)[0m  [1mSELECT "rounds".* FROM "rounds"[0m
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (16.9ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 129ms (Views: 124.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:25:47 +1000
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-07-20 21:25:52 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lEVS4sA5l+i5WdAITFjWaCW5IzlHcfNPAA2y6SHuIjSp1eRmQqiDB8MYgcw5MxtsECrLacdFoWWYmOGntXGSbg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:25:52 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.2ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 88ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-20 21:25:53 +1000
+
+
+Started GET "/" for ::1 at 2015-07-20 21:26:01 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 131ms (Views: 130.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:26:01 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:26:02 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:26:02 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:26:02 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:26:02 +1000
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:26:04 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (2.3ms)
+  Rendered shared/_nav.html.erb (0.4ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered layouts/devise/_container.html.erb (0.8ms)
+Completed 200 OK in 84ms (Views: 83.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-07-20 21:26:18 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/devise/registrations (1.7ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered layouts/devise/_container.html.erb (0.6ms)
+Completed 200 OK in 85ms (Views: 84.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:26:23 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (2.0ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered layouts/devise/_container.html.erb (0.8ms)
+Completed 200 OK in 79ms (Views: 78.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:26:30 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.6ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 89ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:26:34 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 133ms (Views: 132.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:26:35 +1000
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-20 21:26:35 +1000
+
+
+Started GET "/rounds" for ::1 at 2015-07-20 21:26:35 +1000
+Processing by RoundsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:26:35 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (1.7ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered layouts/devise/_container.html.erb (0.6ms)
+Completed 200 OK in 88ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:26:35 +1000
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-20 21:26:36 +1000
+
+
+Started GET "/" for ::1 at 2015-07-20 21:26:47 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 80ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:26:53 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (1.8ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered layouts/devise/_container.html.erb (0.6ms)
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:26:56 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 86ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:26:58 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.0ms)
+Completed 200 OK in 123ms (Views: 122.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:26:58 +1000
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:27:13 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (1.9ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered layouts/devise/_container.html.erb (1.1ms)
+Completed 200 OK in 94ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-07-20 21:27:24 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PLkXfKmjxd63D5FCov6YfkTIq8RwQKEvvbs7vt9cn7nsVjjOZ7TT2mTqSLAWVsSb4RWULOt8gksvftOu/6qf3g==", "user"=>{"email"=>"schu82@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "schu82@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-07-20 11:25:38.978204"], ["current_sign_in_at", "2015-07-20 11:27:24.681572"], ["sign_in_count", 6], ["updated_at", "2015-07-20 11:27:24.682454"], ["id", 1]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/rounds
+Completed 302 Found in 71ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/rounds" for ::1 at 2015-07-20 21:27:24 +1000
+Processing by RoundsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRound Load (0.1ms)[0m  [1mSELECT "rounds".* FROM "rounds"[0m
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (6.5ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 88ms (Views: 85.7ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-07-20 21:27:33 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3yEMbf/3Gz3oiKZTo5kx8ZmdrUPaDdGZ++kHGbFu7XLF+xtNzqpJqbGzT5fibFzYwDQcKlTL3xwcU50ihip/8Q=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:27:33 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 80ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:27:35 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.2ms)
+Completed 200 OK in 76ms (Views: 75.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:27:35 +1000
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:27:39 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (2.1ms)
+  Rendered shared/_nav.html.erb (0.4ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered layouts/devise/_container.html.erb (1.3ms)
+Completed 200 OK in 96ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-07-20 21:27:46 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TP4lVxLnAcI5hqwrqKZSkNb+pyW24QoHpa7z/Tj20YVeFgm2Nz331iUTR6VsWY0qizFsub4BZKD0yamcf5KyZQ==", "user"=>{"email"=>"schu82@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "schu82@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-07-20 11:27:24.681572"], ["current_sign_in_at", "2015-07-20 11:27:46.877550"], ["sign_in_count", 7], ["updated_at", "2015-07-20 11:27:46.878401"], ["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 69ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:27:46 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 89ms (Views: 87.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-07-20 21:27:51 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BFVBWXQiIKdls6u18+SwnL5uoCB+8DkozBiKTtWO5yJDdt2NB7rSIcGPHTkWHUsTUZW9iZrcwzre5ZCW/BQ58A=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:27:51 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 83ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:27:53 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (1.7ms)
+  Rendered shared/_nav.html.erb (0.4ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered layouts/devise/_container.html.erb (0.8ms)
+Completed 200 OK in 75ms (Views: 73.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-07-20 21:28:02 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hWx9Ap0qjEtNOvDTX6Vlud15NBVN4+BK61SW2ZIjsORl9wq/rqbJHARLVfUd9+RvhB8a2SBKVogjIAHlfnOh6Q==", "user"=>{"email"=>"schu82@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "schu82@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-07-20 11:27:46.877550"], ["current_sign_in_at", "2015-07-20 11:28:02.894017"], ["sign_in_count", 8], ["updated_at", "2015-07-20 11:28:02.894669"], ["id", 1]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 66ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:28:02 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 94.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:29:21 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 120ms (Views: 119.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:29:21 +1000
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:29:26 +1000
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:29:26 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 81ms (Views: 80.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:29:28 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.0ms)
+Completed 200 OK in 79ms (Views: 78.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:29:28 +1000
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-07-20 21:29:30 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8/FaICkTuN3YJCBhzRNdHbayBoRGtf5sGUYbyqTt1cErmk//ePXj1nf+Fg3v19G9SBCFAOWlQLKAQd+//rYjDg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:29:30 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 94ms (Views: 93.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:29:32 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 115ms (Views: 114.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:29:33 +1000
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:29:35 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (1.8ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered layouts/devise/_container.html.erb (0.8ms)
+Completed 200 OK in 79ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-07-20 21:29:47 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R1ET6BZew+HMq23nixTw92XpuYodVKfHXUDiq9/MOBRQLY7rI3C1uG/if73cVYpuDqHExg+9M6nhN7zonJ4Rfg==", "user"=>{"email"=>"schu82@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "schu82@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-07-20 11:28:02.894017"], ["current_sign_in_at", "2015-07-20 11:29:48.055951"], ["sign_in_count", 9], ["updated_at", "2015-07-20 11:29:48.056739"], ["id", 1]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:29:48 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 72ms (Views: 71.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:29:52 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 77.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:29:52 +1000
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-20 21:29:52 +1000
+
+
+Started GET "/rounds" for ::1 at 2015-07-20 21:29:53 +1000
+Processing by RoundsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRound Load (0.1ms)[0m  [1mSELECT "rounds".* FROM "rounds"[0m
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (6.6ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 137ms (Views: 134.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:29:53 +1000
+
+
+Started GET "/" for ::1 at 2015-07-20 21:30:10 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 90ms (Views: 89.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-20 21:30:10 +1000
+
+
+Started GET "/" for ::1 at 2015-07-20 21:30:43 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.0ms)
+Completed 200 OK in 91ms (Views: 90.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:30:43 +1000
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-07-20 21:30:45 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jU6iu92+BexbfRTbC6JM66eVWmUUJ7ZPTyUSzED9WIY2bW7Y8PMiPqIfNbMk+bMDJh64VVfyj2jZbIyjAsxzYw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:30:45 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 77ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 21:30:46 +1000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/welcome (0.1ms)
+  Rendered shared/_flash.html.erb (0.0ms)
+Completed 200 OK in 90ms (Views: 89.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:30:46 +1000
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:30:48 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (3.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (wrong number of arguments (3 for 0..2)):
+    20:       <% end -%>
+    21: 
+    22:       <div class="actions">
+    23:         <%= f.submit "Log in", rounds_path, class: 'btn btn-default' %>
+    24:         <%= render "devise/shared/links" %>
+    25:       </div>
+    26:     <% end %>
+  app/views/devise/sessions/new.html.erb:23:in `block in _app_views_devise_sessions_new_html_erb__1327537274794564157_70341245984580'
+  app/views/devise/sessions/new.html.erb:6:in `_app_views_devise_sessions_new_html_erb__1327537274794564157_70341245984580'
+
+
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (16.8ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:30:48 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (1.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (wrong number of arguments (3 for 0..2)):
+    20:       <% end -%>
+    21: 
+    22:       <div class="actions">
+    23:         <%= f.submit "Log in", rounds_path, class: 'btn btn-default' %>
+    24:         <%= render "devise/shared/links" %>
+    25:       </div>
+    26:     <% end %>
+  app/views/devise/sessions/new.html.erb:23:in `block in _app_views_devise_sessions_new_html_erb__1327537274794564157_70341245984580'
+  app/views/devise/sessions/new.html.erb:6:in `_app_views_devise_sessions_new_html_erb__1327537274794564157_70341245984580'
+
+
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (19.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-20 21:31:00 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (2.5ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered layouts/devise/_container.html.erb (0.6ms)
+Completed 200 OK in 87ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/welcome.self-74c96330c9d3d98dd1bb7124b5b32f6e16eb6f1bd7974ff939825affef6e0f37.css?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/rounds.self-5cf8b01aca6ba1dfc9fbea011b1af01996b5d202eded8caf1991d5323568b9e0.css?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-20 21:31:00 +1000
+  [1m[36mRound Load (0.7ms)[0m  [1mSELECT  "rounds".* FROM "rounds"  ORDER BY "rounds"."id" ASC LIMIT 1[0m
