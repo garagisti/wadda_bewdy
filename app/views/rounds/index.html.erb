@@ -24,7 +24,7 @@
             <td><%= round.circuit.country %></td>
             <td><%= round.qly_result.pole_position unless round.qly_result.nil? %></td>
             <td><%= round.race_result.winner unless round.race_result.nil? %></td>
-            <td>TBA</td>
+            <td><%= link_to 'Enter Tips', tips_path, class: "btn btn" %></td>
           </tr>
           <% end %>
       </tbody>
