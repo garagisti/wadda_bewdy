@@ -5,5 +5,6 @@ class RoundsController < SessionsController
   end
 
   def show
+    # This will show a nice view of the round
   end
 end
