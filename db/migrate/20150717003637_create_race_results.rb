@@ -1,7 +1,7 @@
 class CreateRaceResults < ActiveRecord::Migration
   def change
     create_table :race_results do |t|
-      t.string :round_id, null: false
+      t.integer :round_id, null: false
       t.integer :race_result_1, null: false
       t.integer :race_result_2, null: false
       t.integer :race_result_3, null: false

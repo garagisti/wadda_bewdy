@@ -5,7 +5,7 @@ class CreateRounds < ActiveRecord::Migration
       t.string  :round_number, null: false
       t.integer :circuit_id, null: false
       t.datetime :qly_datetime, null: false
-      t.datetime :race_datetime
+      t.datetime :race_datetime, null: false
       t.timestamps null: false
     end
 

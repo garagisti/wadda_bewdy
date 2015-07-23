@@ -23822,3 +23822,688 @@ Processing by RoundsController#index as HTML
   Rendered rounds/index.html.erb within layouts/application (6.3ms)
   Rendered shared/_flash.html.erb (0.1ms)
 Completed 200 OK in 137ms (Views: 135.0ms | ActiveRecord: 1.1ms)
+  [1m[36mRound Load (0.2ms)[0m  [1mSELECT  "rounds".* FROM "rounds"  ORDER BY "rounds"."id" ASC LIMIT 1[0m
+  [1m[35mRaceResult Load (0.2ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "1"]]
+
+
+Started GET "/rounds" for ::1 at 2015-07-23 20:06:31 +1000
+Processing by RoundsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRound Load (0.2ms)[0m  SELECT "rounds".* FROM "rounds"
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "1"]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "1"]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "2"]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "2"]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "3"]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "3"]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "4"]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "4"]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "5"]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "5"]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "6"]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "6"]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "7"]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "7"]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "8"]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "8"]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "9"]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "9"]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "10"]]
+  Rendered rounds/index.html.erb within layouts/application (34.8ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 2.8ms)
+
+ActionView::Template::Error (undefined method `qly_result_1' for nil:NilClass):
+    22:             <td><%= round.circuit.name %></td>
+    23:             <td><%= round.circuit.locality %></td>
+    24:             <td><%= round.circuit.country %></td>
+    25:             <td><%= round.qly_result.qly_result_1 %></td>
+    26:             <td><%= round.race_result.race_result_1 %></td>
+    27:             <td>TBA</td>
+    28:           </tr>
+  app/views/rounds/index.html.erb:25:in `block in _app_views_rounds_index_html_erb__1474514856227820709_70341354061540'
+  app/views/rounds/index.html.erb:19:in `_app_views_rounds_index_html_erb__1474514856227820709_70341354061540'
+
+
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (21.3ms)
+  [1m[36mQlyResult Load (0.2ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "1"]]
+
+
+Started GET "/rounds" for ::1 at 2015-07-23 20:07:17 +1000
+Processing by RoundsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRound Load (0.1ms)[0m  [1mSELECT "rounds".* FROM "rounds"[0m
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "1"]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "1"]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "2"]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "2"]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "3"]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "3"]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "4"]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "4"]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "5"]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "5"]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "6"]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "6"]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "7"]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "7"]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "8"]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "8"]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "9"]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "9"]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "10"]]
+  Rendered rounds/index.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.7ms)
+
+ActionView::Template::Error (undefined method `qly_result_1' for nil:NilClass):
+    22:             <td><%= round.circuit.name %></td>
+    23:             <td><%= round.circuit.locality %></td>
+    24:             <td><%= round.circuit.country %></td>
+    25:             <td><%= round.qly_result.qly_result_1 %></td>
+    26:             <td><%= round.race_result.race_result_1 %></td>
+    27:             <td>TBA</td>
+    28:           </tr>
+  app/views/rounds/index.html.erb:25:in `block in _app_views_rounds_index_html_erb__1474514856227820709_70341354061540'
+  app/views/rounds/index.html.erb:19:in `_app_views_rounds_index_html_erb__1474514856227820709_70341354061540'
+
+
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (16.6ms)
+
+
+Started GET "/rounds" for ::1 at 2015-07-23 20:08:13 +1000
+Processing by RoundsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRound Load (0.1ms)[0m  SELECT "rounds".* FROM "rounds"
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "1"]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "1"]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "2"]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "2"]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "3"]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "3"]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "4"]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "4"]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "5"]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "5"]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "6"]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "6"]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "7"]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "7"]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "8"]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", "8"]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", "9"]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", "9"]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", "10"]]
+  Rendered rounds/index.html.erb within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (undefined method `qly_result_1' for nil:NilClass):
+    22:             <td><%= round.circuit.name %></td>
+    23:             <td><%= round.circuit.locality %></td>
+    24:             <td><%= round.circuit.country %></td>
+    25:             <td><%= round.qly_result.qly_result_1 %></td>
+    26:             <td><%= round.race_result.race_result_1 %></td>
+    27:             <td>TBA</td>
+    28:           </tr>
+  app/views/rounds/index.html.erb:25:in `block in _app_views_rounds_index_html_erb__1474514856227820709_70341404448580'
+  app/views/rounds/index.html.erb:19:in `_app_views_rounds_index_html_erb__1474514856227820709_70341404448580'
+
+
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (17.5ms)
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDrivers (20150712051019)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "drivers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ergast_driver_id" varchar NOT NULL, "ergast_driver_code" varchar NOT NULL, "name" varchar NOT NULL, "number" integer NOT NULL, "constructor_id" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_drivers_on_constructor_id" ON "drivers" ("constructor_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150712051019"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateConstructors (20150712061220)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "constructors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ergast_constructor_code" varchar, "name" varchar NOT NULL, "nationality" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150712061220"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCircuits (20150717003607)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "circuits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ergast_circuit_code" varchar NOT NULL, "name" varchar NOT NULL, "locality" varchar NOT NULL, "country" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150717003607"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateRounds (20150717003615)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "rounds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "round_number" varchar NOT NULL, "circuit_id" integer NOT NULL, "qly_datetime" datetime NOT NULL, "race_datetime" datetime NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_rounds_on_circuit_id" ON "rounds" ("circuit_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150717003615"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateRaceResults (20150717003637)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "race_results" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "round_id" integer NOT NULL, "race_result_1" integer NOT NULL, "race_result_2" integer NOT NULL, "race_result_3" integer NOT NULL, "race_result_4" integer NOT NULL, "race_result_5" integer NOT NULL, "race_result_6" integer NOT NULL, "race_result_7" integer NOT NULL, "race_result_8" integer NOT NULL, "race_result_9" integer NOT NULL, "race_result_10" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_race_results_on_round_id" ON "race_results" ("round_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150717003637"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateQlyResults (20150717003645)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "qly_results" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "round_id" integer NOT NULL, "qly_result_1" integer NOT NULL, "qly_result_2" integer NOT NULL, "qly_result_3" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_qly_results_on_round_id" ON "qly_results" ("round_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150717003645"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to DeviseCreateUsers (20150718010412)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150718010412"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_drivers_on_constructor_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_drivers_on_constructor_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_qly_results_on_round_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_qly_results_on_round_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_race_results_on_round_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_race_results_on_round_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rounds_on_circuit_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rounds_on_circuit_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["ergast_circuit_code", "albert_park"], ["name", "Albert Park Grand Prix Circuit"], ["locality", "Melbourne"], ["country", "Australia"], ["created_at", "2015-07-23 10:13:29.541651"], ["updated_at", "2015-07-23 10:13:29.541651"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["ergast_circuit_code", "americas"], ["name", "Circuit of the Americas"], ["locality", "Austin"], ["country", "USA"], ["created_at", "2015-07-23 10:13:29.546319"], ["updated_at", "2015-07-23 10:13:29.546319"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["ergast_circuit_code", "bahrain"], ["name", "Bahrain International Circuit"], ["locality", "Sakhir"], ["country", "Bahrain"], ["created_at", "2015-07-23 10:13:29.548253"], ["updated_at", "2015-07-23 10:13:29.548253"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["ergast_circuit_code", "catalunya"], ["name", "Circuit de Catalunya"], ["locality", "Montmeló"], ["country", "Spain"], ["created_at", "2015-07-23 10:13:29.549862"], ["updated_at", "2015-07-23 10:13:29.549862"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["ergast_circuit_code", "hungaroring"], ["name", "Hungaroring"], ["locality", "Budapest"], ["country", "Hungary"], ["created_at", "2015-07-23 10:13:29.551471"], ["updated_at", "2015-07-23 10:13:29.551471"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["ergast_circuit_code", "interlagos"], ["name", "Autódromo José Carlos Pace"], ["locality", "São Paulo"], ["country", "Brazil"], ["created_at", "2015-07-23 10:13:29.553034"], ["updated_at", "2015-07-23 10:13:29.553034"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["ergast_circuit_code", "marina_bay"], ["name", "Marina Bay Street Circuit"], ["locality", "Marina Bay"], ["country", "Singapore"], ["created_at", "2015-07-23 10:13:29.554632"], ["updated_at", "2015-07-23 10:13:29.554632"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["ergast_circuit_code", "monaco"], ["name", "Circuit de Monaco"], ["locality", "Monte-Carlo"], ["country", "Monaco"], ["created_at", "2015-07-23 10:13:29.556509"], ["updated_at", "2015-07-23 10:13:29.556509"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["ergast_circuit_code", "monza"], ["name", "Autodromo Nazionale di Monza"], ["locality", "Monza"], ["country", "Italy"], ["created_at", "2015-07-23 10:13:29.558275"], ["updated_at", "2015-07-23 10:13:29.558275"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["ergast_circuit_code", "red_bull_ring"], ["name", "Red Bull Ring"], ["locality", "Spielburg"], ["country", "Austria"], ["created_at", "2015-07-23 10:13:29.560049"], ["updated_at", "2015-07-23 10:13:29.560049"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["ergast_circuit_code", "rodriguez"], ["name", "Autódromo Hermanos Rodríguez"], ["locality", "Mexico City"], ["country", "Mexico"], ["created_at", "2015-07-23 10:13:29.561894"], ["updated_at", "2015-07-23 10:13:29.561894"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["ergast_circuit_code", "sepang"], ["name", "Sepang International Circuit"], ["locality", "Kuala Lumpur"], ["country", "Malaysia"], ["created_at", "2015-07-23 10:13:29.563708"], ["updated_at", "2015-07-23 10:13:29.563708"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["ergast_circuit_code", "shanghai"], ["name", "Shanghai International Circuit"], ["locality", "Shanghai"], ["country", "China"], ["created_at", "2015-07-23 10:13:29.565347"], ["updated_at", "2015-07-23 10:13:29.565347"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["ergast_circuit_code", "silverstone"], ["name", "Silverstone Circuit"], ["locality", "Silverstone"], ["country", "UK"], ["created_at", "2015-07-23 10:13:29.566942"], ["updated_at", "2015-07-23 10:13:29.566942"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["ergast_circuit_code", "sochi"], ["name", "Sochi International Street Circuit"], ["locality", "Sochi"], ["country", "Russia"], ["created_at", "2015-07-23 10:13:29.568509"], ["updated_at", "2015-07-23 10:13:29.568509"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["ergast_circuit_code", "spa"], ["name", "Circuit de Spa-Francorchamps"], ["locality", "Spa"], ["country", "Belgium"], ["created_at", "2015-07-23 10:13:29.570002"], ["updated_at", "2015-07-23 10:13:29.570002"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["ergast_circuit_code", "suzuka"], ["name", "Suzuka Circuit"], ["locality", "Suzuka"], ["country", "Japan"], ["created_at", "2015-07-23 10:13:29.571510"], ["updated_at", "2015-07-23 10:13:29.571510"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["ergast_circuit_code", "villeneuve"], ["name", "Circuit Gilles Villeneuve"], ["locality", "Montreal"], ["country", "Canada"], ["created_at", "2015-07-23 10:13:29.573108"], ["updated_at", "2015-07-23 10:13:29.573108"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "circuits" ("ergast_circuit_code", "name", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["ergast_circuit_code", "yas_marina"], ["name", "Yas Marina Circuit"], ["locality", "Abu Dhabi"], ["country", "UAE"], ["created_at", "2015-07-23 10:13:29.574712"], ["updated_at", "2015-07-23 10:13:29.574712"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "albert_park"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "1"], ["circuit_id", 1], ["qly_datetime", "2015-03-14 06:00:00.000000"], ["race_datetime", "2015-03-15 05:00:00.000000"], ["created_at", "2015-07-23 10:13:32.507388"], ["updated_at", "2015-07-23 10:13:32.507388"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "sepang"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "2"], ["circuit_id", 12], ["qly_datetime", "2015-03-28 09:00:00.000000"], ["race_datetime", "2015-03-29 07:00:00.000000"], ["created_at", "2015-07-23 10:13:32.511299"], ["updated_at", "2015-07-23 10:13:32.511299"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "shanghai"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "3"], ["circuit_id", 13], ["qly_datetime", "2015-04-11 06:00:00.000000"], ["race_datetime", "2015-04-12 06:00:00.000000"], ["created_at", "2015-07-23 10:13:32.514230"], ["updated_at", "2015-07-23 10:13:32.514230"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "bahrain"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "4"], ["circuit_id", 3], ["qly_datetime", "2015-04-18 15:00:00.000000"], ["race_datetime", "2015-04-19 15:00:00.000000"], ["created_at", "2015-07-23 10:13:32.516780"], ["updated_at", "2015-07-23 10:13:32.516780"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "catalunya"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "5"], ["circuit_id", 4], ["qly_datetime", "2015-05-09 12:00:00.000000"], ["race_datetime", "2015-05-10 12:00:00.000000"], ["created_at", "2015-07-23 10:13:32.519446"], ["updated_at", "2015-07-23 10:13:32.519446"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "monaco"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "6"], ["circuit_id", 8], ["qly_datetime", "2015-05-23 12:00:00.000000"], ["race_datetime", "2015-05-24 12:00:00.000000"], ["created_at", "2015-07-23 10:13:32.522318"], ["updated_at", "2015-07-23 10:13:32.522318"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "villeneuve"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "7"], ["circuit_id", 18], ["qly_datetime", "2015-06-06 18:00:00.000000"], ["race_datetime", "2015-06-07 18:00:00.000000"], ["created_at", "2015-07-23 10:13:32.524854"], ["updated_at", "2015-07-23 10:13:32.524854"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "red_bull_ring"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "8"], ["circuit_id", 10], ["qly_datetime", "2015-06-20 12:00:00.000000"], ["race_datetime", "2015-06-21 12:00:00.000000"], ["created_at", "2015-07-23 10:13:32.527259"], ["updated_at", "2015-07-23 10:13:32.527259"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "silverstone"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "9"], ["circuit_id", 14], ["qly_datetime", "2015-07-04 12:00:00.000000"], ["race_datetime", "2015-07-05 12:00:00.000000"], ["created_at", "2015-07-23 10:13:32.529556"], ["updated_at", "2015-07-23 10:13:32.529556"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "hungaroring"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "10"], ["circuit_id", 5], ["qly_datetime", "2015-07-25 12:00:00.000000"], ["race_datetime", "2015-07-26 12:00:00.000000"], ["created_at", "2015-07-23 10:13:32.531981"], ["updated_at", "2015-07-23 10:13:32.531981"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "spa"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "11"], ["circuit_id", 16], ["qly_datetime", "2015-08-22 12:00:00.000000"], ["race_datetime", "2015-08-23 12:00:00.000000"], ["created_at", "2015-07-23 10:13:32.534214"], ["updated_at", "2015-07-23 10:13:32.534214"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "monza"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "12"], ["circuit_id", 9], ["qly_datetime", "2015-09-05 12:00:00.000000"], ["race_datetime", "2015-09-06 12:00:00.000000"], ["created_at", "2015-07-23 10:13:32.536501"], ["updated_at", "2015-07-23 10:13:32.536501"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "marina_bay"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "13"], ["circuit_id", 7], ["qly_datetime", "2015-09-19 12:00:00.000000"], ["race_datetime", "2015-09-20 12:00:00.000000"], ["created_at", "2015-07-23 10:13:32.538953"], ["updated_at", "2015-07-23 10:13:32.538953"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "suzuka"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "14"], ["circuit_id", 17], ["qly_datetime", "2015-09-26 05:00:00.000000"], ["race_datetime", "2015-09-27 05:00:00.000000"], ["created_at", "2015-07-23 10:13:32.541433"], ["updated_at", "2015-07-23 10:13:32.541433"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "sochi"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "15"], ["circuit_id", 15], ["qly_datetime", "2015-10-10 11:00:00.000000"], ["race_datetime", "2015-10-11 11:00:00.000000"], ["created_at", "2015-07-23 10:13:32.544572"], ["updated_at", "2015-07-23 10:13:32.544572"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "americas"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "16"], ["circuit_id", 2], ["qly_datetime", "2015-10-24 18:00:00.000000"], ["race_datetime", "2015-10-25 19:00:00.000000"], ["created_at", "2015-07-23 10:13:32.546561"], ["updated_at", "2015-07-23 10:13:32.546561"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "rodriguez"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "17"], ["circuit_id", 11], ["qly_datetime", "2015-10-31 19:00:00.000000"], ["race_datetime", "2015-11-01 19:00:00.000000"], ["created_at", "2015-07-23 10:13:32.548477"], ["updated_at", "2015-07-23 10:13:32.548477"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "interlagos"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "18"], ["circuit_id", 6], ["qly_datetime", "2015-11-14 16:00:00.000000"], ["race_datetime", "2015-11-15 16:00:00.000000"], ["created_at", "2015-07-23 10:13:32.550350"], ["updated_at", "2015-07-23 10:13:32.550350"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "circuits"."id" FROM "circuits" WHERE "circuits"."ergast_circuit_code" = ?  [["ergast_circuit_code", "yas_marina"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rounds" ("round_number", "circuit_id", "qly_datetime", "race_datetime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_number", "19"], ["circuit_id", 19], ["qly_datetime", "2015-11-28 13:00:00.000000"], ["race_datetime", "2015-11-29 13:00:00.000000"], ["created_at", "2015-07-23 10:13:32.552523"], ["updated_at", "2015-07-23 10:13:32.552523"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "constructors" ("ergast_constructor_code", "name", "nationality", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["ergast_constructor_code", "ferrari"], ["name", "Ferrari"], ["nationality", "Italian"], ["created_at", "2015-07-23 10:13:35.469964"], ["updated_at", "2015-07-23 10:13:35.469964"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "constructors" ("ergast_constructor_code", "name", "nationality", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["ergast_constructor_code", "force_india"], ["name", "Force India"], ["nationality", "Indian"], ["created_at", "2015-07-23 10:13:35.472536"], ["updated_at", "2015-07-23 10:13:35.472536"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "constructors" ("ergast_constructor_code", "name", "nationality", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["ergast_constructor_code", "lotus_f1"], ["name", "Lotus F1"], ["nationality", "British"], ["created_at", "2015-07-23 10:13:35.474144"], ["updated_at", "2015-07-23 10:13:35.474144"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "constructors" ("ergast_constructor_code", "name", "nationality", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["ergast_constructor_code", "manor"], ["name", "Manor Marussia"], ["nationality", "British"], ["created_at", "2015-07-23 10:13:35.475866"], ["updated_at", "2015-07-23 10:13:35.475866"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "constructors" ("ergast_constructor_code", "name", "nationality", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["ergast_constructor_code", "mclaren"], ["name", "McLaren"], ["nationality", "British"], ["created_at", "2015-07-23 10:13:35.477499"], ["updated_at", "2015-07-23 10:13:35.477499"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "constructors" ("ergast_constructor_code", "name", "nationality", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["ergast_constructor_code", "mercedes"], ["name", "Mercedes"], ["nationality", "German"], ["created_at", "2015-07-23 10:13:35.479090"], ["updated_at", "2015-07-23 10:13:35.479090"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "constructors" ("ergast_constructor_code", "name", "nationality", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["ergast_constructor_code", "red_bull"], ["name", "Red Bull"], ["nationality", "Austrian"], ["created_at", "2015-07-23 10:13:35.480625"], ["updated_at", "2015-07-23 10:13:35.480625"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "constructors" ("ergast_constructor_code", "name", "nationality", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["ergast_constructor_code", "sauber"], ["name", "Sauber"], ["nationality", "Swiss"], ["created_at", "2015-07-23 10:13:35.482271"], ["updated_at", "2015-07-23 10:13:35.482271"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "constructors" ("ergast_constructor_code", "name", "nationality", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["ergast_constructor_code", "toro_rosso"], ["name", "Toro Rosso"], ["nationality", "Italian"], ["created_at", "2015-07-23 10:13:35.483984"], ["updated_at", "2015-07-23 10:13:35.483984"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "constructors" ("ergast_constructor_code", "name", "nationality", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["ergast_constructor_code", "williams"], ["name", "Williams"], ["nationality", "British"], ["created_at", "2015-07-23 10:13:35.485568"], ["updated_at", "2015-07-23 10:13:35.485568"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mConstructor Load (0.1ms)[0m  SELECT "constructors".* FROM "constructors"
+  [1m[36m (0.2ms)[0m  [1mSELECT "constructors"."id" FROM "constructors" WHERE "constructors"."ergast_constructor_code" = ?[0m  [["ergast_constructor_code", "ferrari"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["ergast_driver_id", "raikkonen"], ["ergast_driver_code", "RAI"], ["name", "Kimi Räikkönen"], ["number", 7], ["constructor_id", 1], ["created_at", "2015-07-23 10:13:38.545375"], ["updated_at", "2015-07-23 10:13:38.545375"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["ergast_driver_id", "vettel"], ["ergast_driver_code", "VET"], ["name", "Sebastian Vettel"], ["number", 5], ["constructor_id", 1], ["created_at", "2015-07-23 10:13:38.548017"], ["updated_at", "2015-07-23 10:13:38.548017"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "constructors"."id" FROM "constructors" WHERE "constructors"."ergast_constructor_code" = ?  [["ergast_constructor_code", "force_india"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["ergast_driver_id", "hulkenberg"], ["ergast_driver_code", "HUL"], ["name", "Nico Hülkenberg"], ["number", 27], ["constructor_id", 2], ["created_at", "2015-07-23 10:13:41.507418"], ["updated_at", "2015-07-23 10:13:41.507418"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["ergast_driver_id", "perez"], ["ergast_driver_code", "PER"], ["name", "Sergio Pérez"], ["number", 11], ["constructor_id", 2], ["created_at", "2015-07-23 10:13:41.511161"], ["updated_at", "2015-07-23 10:13:41.511161"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "constructors"."id" FROM "constructors" WHERE "constructors"."ergast_constructor_code" = ?[0m  [["ergast_constructor_code", "lotus_f1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["ergast_driver_id", "grosjean"], ["ergast_driver_code", "GRO"], ["name", "Romain Grosjean"], ["number", 8], ["constructor_id", 3], ["created_at", "2015-07-23 10:13:42.941318"], ["updated_at", "2015-07-23 10:13:42.941318"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["ergast_driver_id", "maldonado"], ["ergast_driver_code", "MAL"], ["name", "Pastor Maldonado"], ["number", 13], ["constructor_id", 3], ["created_at", "2015-07-23 10:13:42.944505"], ["updated_at", "2015-07-23 10:13:42.944505"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "constructors"."id" FROM "constructors" WHERE "constructors"."ergast_constructor_code" = ?  [["ergast_constructor_code", "manor"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["ergast_driver_id", "merhi"], ["ergast_driver_code", "MER"], ["name", "Roberto Merhi"], ["number", 98], ["constructor_id", 4], ["created_at", "2015-07-23 10:13:44.568800"], ["updated_at", "2015-07-23 10:13:44.568800"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["ergast_driver_id", "stevens"], ["ergast_driver_code", "STE"], ["name", "Will Stevens"], ["number", 28], ["constructor_id", 4], ["created_at", "2015-07-23 10:13:44.571759"], ["updated_at", "2015-07-23 10:13:44.571759"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "constructors"."id" FROM "constructors" WHERE "constructors"."ergast_constructor_code" = ?[0m  [["ergast_constructor_code", "mclaren"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["ergast_driver_id", "alonso"], ["ergast_driver_code", "ALO"], ["name", "Fernando Alonso"], ["number", 14], ["constructor_id", 5], ["created_at", "2015-07-23 10:13:46.524450"], ["updated_at", "2015-07-23 10:13:46.524450"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["ergast_driver_id", "button"], ["ergast_driver_code", "BUT"], ["name", "Jenson Button"], ["number", 22], ["constructor_id", 5], ["created_at", "2015-07-23 10:13:46.528464"], ["updated_at", "2015-07-23 10:13:46.528464"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["ergast_driver_id", "kevin_magnussen"], ["ergast_driver_code", "MAG"], ["name", "Kevin Magnussen"], ["number", 20], ["constructor_id", 5], ["created_at", "2015-07-23 10:13:46.531472"], ["updated_at", "2015-07-23 10:13:46.531472"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "constructors"."id" FROM "constructors" WHERE "constructors"."ergast_constructor_code" = ?[0m  [["ergast_constructor_code", "mercedes"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["ergast_driver_id", "hamilton"], ["ergast_driver_code", "HAM"], ["name", "Lewis Hamilton"], ["number", 44], ["constructor_id", 6], ["created_at", "2015-07-23 10:13:47.484399"], ["updated_at", "2015-07-23 10:13:47.484399"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["ergast_driver_id", "rosberg"], ["ergast_driver_code", "ROS"], ["name", "Nico Rosberg"], ["number", 6], ["constructor_id", 6], ["created_at", "2015-07-23 10:13:47.488048"], ["updated_at", "2015-07-23 10:13:47.488048"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "constructors"."id" FROM "constructors" WHERE "constructors"."ergast_constructor_code" = ?  [["ergast_constructor_code", "red_bull"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["ergast_driver_id", "kvyat"], ["ergast_driver_code", "KVY"], ["name", "Daniil Kvyat"], ["number", 26], ["constructor_id", 7], ["created_at", "2015-07-23 10:13:51.542278"], ["updated_at", "2015-07-23 10:13:51.542278"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["ergast_driver_id", "ricciardo"], ["ergast_driver_code", "RIC"], ["name", "Daniel Ricciardo"], ["number", 3], ["constructor_id", 7], ["created_at", "2015-07-23 10:13:51.545812"], ["updated_at", "2015-07-23 10:13:51.545812"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "constructors"."id" FROM "constructors" WHERE "constructors"."ergast_constructor_code" = ?[0m  [["ergast_constructor_code", "sauber"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["ergast_driver_id", "ericsson"], ["ergast_driver_code", "ERI"], ["name", "Marcus Ericsson"], ["number", 9], ["constructor_id", 8], ["created_at", "2015-07-23 10:13:54.512006"], ["updated_at", "2015-07-23 10:13:54.512006"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["ergast_driver_id", "nasr"], ["ergast_driver_code", "NAS"], ["name", "Felipe Nasr"], ["number", 12], ["constructor_id", 8], ["created_at", "2015-07-23 10:13:54.515682"], ["updated_at", "2015-07-23 10:13:54.515682"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "constructors"."id" FROM "constructors" WHERE "constructors"."ergast_constructor_code" = ?  [["ergast_constructor_code", "toro_rosso"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["ergast_driver_id", "sainz"], ["ergast_driver_code", "SAI"], ["name", "Carlos Sainz"], ["number", 55], ["constructor_id", 9], ["created_at", "2015-07-23 10:13:57.584033"], ["updated_at", "2015-07-23 10:13:57.584033"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["ergast_driver_id", "max_verstappen"], ["ergast_driver_code", "VES"], ["name", "Max Verstappen"], ["number", 33], ["constructor_id", 9], ["created_at", "2015-07-23 10:13:57.587650"], ["updated_at", "2015-07-23 10:13:57.587650"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "constructors"."id" FROM "constructors" WHERE "constructors"."ergast_constructor_code" = ?[0m  [["ergast_constructor_code", "williams"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["ergast_driver_id", "bottas"], ["ergast_driver_code", "BOT"], ["name", "Valtteri Bottas"], ["number", 77], ["constructor_id", 10], ["created_at", "2015-07-23 10:13:59.003167"], ["updated_at", "2015-07-23 10:13:59.003167"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "drivers" ("ergast_driver_id", "ergast_driver_code", "name", "number", "constructor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["ergast_driver_id", "massa"], ["ergast_driver_code", "MAS"], ["name", "Felipe Massa"], ["number", 19], ["constructor_id", 10], ["created_at", "2015-07-23 10:13:59.007022"], ["updated_at", "2015-07-23 10:13:59.007022"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "rounds" WHERE (race_datetime < '2015-07-23 10:13:59.009067')
+  [1m[36m (0.2ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "hamilton"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "hamilton"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "rosberg"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "rosberg"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "vettel"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "massa"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "massa"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "nasr"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "ricciardo"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "hulkenberg"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "ericsson"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "sainz"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "perez"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "bottas"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "race_results" ("round_id", "race_result_1", "race_result_2", "race_result_3", "race_result_4", "race_result_5", "race_result_6", "race_result_7", "race_result_8", "race_result_9", "race_result_10", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["round_id", 1], ["race_result_1", 12], ["race_result_2", 13], ["race_result_3", 2], ["race_result_4", 21], ["race_result_5", 17], ["race_result_6", 15], ["race_result_7", 3], ["race_result_8", 16], ["race_result_9", 18], ["race_result_10", 4], ["created_at", "2015-07-23 10:14:01.591500"], ["updated_at", "2015-07-23 10:14:01.591500"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "qly_results" ("round_id", "qly_result_1", "qly_result_2", "qly_result_3", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["round_id", 1], ["qly_result_1", 12], ["qly_result_2", 13], ["qly_result_3", 21], ["created_at", "2015-07-23 10:14:01.598999"], ["updated_at", "2015-07-23 10:14:01.598999"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "vettel"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "vettel"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "hamilton"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "hamilton"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "rosberg"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "rosberg"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "raikkonen"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "bottas"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "massa"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "max_verstappen"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "sainz"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "kvyat"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "ricciardo"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "stevens"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "race_results" ("round_id", "race_result_1", "race_result_2", "race_result_3", "race_result_4", "race_result_5", "race_result_6", "race_result_7", "race_result_8", "race_result_9", "race_result_10", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["round_id", 2], ["race_result_1", 2], ["race_result_2", 12], ["race_result_3", 13], ["race_result_4", 1], ["race_result_5", 20], ["race_result_6", 21], ["race_result_7", 19], ["race_result_8", 18], ["race_result_9", 14], ["race_result_10", 15], ["created_at", "2015-07-23 10:14:04.553416"], ["updated_at", "2015-07-23 10:14:04.553416"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "qly_results" ("round_id", "qly_result_1", "qly_result_2", "qly_result_3", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["round_id", 2], ["qly_result_1", 12], ["qly_result_2", 2], ["qly_result_3", 13], ["created_at", "2015-07-23 10:14:04.556874"], ["updated_at", "2015-07-23 10:14:04.556874"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "hamilton"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "hamilton"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "rosberg"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "rosberg"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "vettel"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "vettel"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "raikkonen"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "massa"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "bottas"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "grosjean"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "nasr"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "ricciardo"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "ericsson"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "race_results" ("round_id", "race_result_1", "race_result_2", "race_result_3", "race_result_4", "race_result_5", "race_result_6", "race_result_7", "race_result_8", "race_result_9", "race_result_10", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["round_id", 3], ["race_result_1", 12], ["race_result_2", 13], ["race_result_3", 2], ["race_result_4", 1], ["race_result_5", 21], ["race_result_6", 20], ["race_result_7", 5], ["race_result_8", 17], ["race_result_9", 15], ["race_result_10", 16], ["created_at", "2015-07-23 10:14:07.070714"], ["updated_at", "2015-07-23 10:14:07.070714"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "qly_results" ("round_id", "qly_result_1", "qly_result_2", "qly_result_3", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_id", 3], ["qly_result_1", 12], ["qly_result_2", 13], ["qly_result_3", 2], ["created_at", "2015-07-23 10:14:07.073705"], ["updated_at", "2015-07-23 10:14:07.073705"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "hamilton"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "hamilton"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "raikkonen"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "rosberg"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "rosberg"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "bottas"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "vettel"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "vettel"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "ricciardo"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "grosjean"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "perez"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "kvyat"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "massa"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "race_results" ("round_id", "race_result_1", "race_result_2", "race_result_3", "race_result_4", "race_result_5", "race_result_6", "race_result_7", "race_result_8", "race_result_9", "race_result_10", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["round_id", 4], ["race_result_1", 12], ["race_result_2", 1], ["race_result_3", 13], ["race_result_4", 20], ["race_result_5", 2], ["race_result_6", 15], ["race_result_7", 5], ["race_result_8", 4], ["race_result_9", 14], ["race_result_10", 21], ["created_at", "2015-07-23 10:14:09.570992"], ["updated_at", "2015-07-23 10:14:09.570992"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "qly_results" ("round_id", "qly_result_1", "qly_result_2", "qly_result_3", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["round_id", 4], ["qly_result_1", 12], ["qly_result_2", 2], ["qly_result_3", 13], ["created_at", "2015-07-23 10:14:09.574526"], ["updated_at", "2015-07-23 10:14:09.574526"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "rosberg"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "rosberg"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "hamilton"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "hamilton"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "vettel"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "vettel"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "bottas"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "raikkonen"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "massa"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "ricciardo"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "grosjean"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "sainz"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "kvyat"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "race_results" ("round_id", "race_result_1", "race_result_2", "race_result_3", "race_result_4", "race_result_5", "race_result_6", "race_result_7", "race_result_8", "race_result_9", "race_result_10", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["round_id", 5], ["race_result_1", 13], ["race_result_2", 12], ["race_result_3", 2], ["race_result_4", 20], ["race_result_5", 1], ["race_result_6", 21], ["race_result_7", 15], ["race_result_8", 5], ["race_result_9", 18], ["race_result_10", 14], ["created_at", "2015-07-23 10:14:12.541386"], ["updated_at", "2015-07-23 10:14:12.541386"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "qly_results" ("round_id", "qly_result_1", "qly_result_2", "qly_result_3", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_id", 5], ["qly_result_1", 13], ["qly_result_2", 12], ["qly_result_3", 2], ["created_at", "2015-07-23 10:14:12.545213"], ["updated_at", "2015-07-23 10:14:12.545213"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "rosberg"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "rosberg"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "vettel"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "vettel"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "hamilton"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "hamilton"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "kvyat"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "ricciardo"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "raikkonen"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "perez"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "button"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "nasr"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "sainz"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "sainz"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "race_results" ("round_id", "race_result_1", "race_result_2", "race_result_3", "race_result_4", "race_result_5", "race_result_6", "race_result_7", "race_result_8", "race_result_9", "race_result_10", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["round_id", 6], ["race_result_1", 13], ["race_result_2", 2], ["race_result_3", 12], ["race_result_4", 14], ["race_result_5", 15], ["race_result_6", 1], ["race_result_7", 4], ["race_result_8", 10], ["race_result_9", 17], ["race_result_10", 18], ["created_at", "2015-07-23 10:14:14.400797"], ["updated_at", "2015-07-23 10:14:14.400797"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "qly_results" ("round_id", "qly_result_1", "qly_result_2", "qly_result_3", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_id", 6], ["qly_result_1", 12], ["qly_result_2", 13], ["qly_result_3", 2], ["created_at", "2015-07-23 10:14:14.404563"], ["updated_at", "2015-07-23 10:14:14.404563"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "hamilton"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "hamilton"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "rosberg"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "rosberg"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "bottas"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "raikkonen"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "raikkonen"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "vettel"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "massa"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "maldonado"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "hulkenberg"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "kvyat"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "grosjean"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "race_results" ("round_id", "race_result_1", "race_result_2", "race_result_3", "race_result_4", "race_result_5", "race_result_6", "race_result_7", "race_result_8", "race_result_9", "race_result_10", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["round_id", 7], ["race_result_1", 12], ["race_result_2", 13], ["race_result_3", 20], ["race_result_4", 1], ["race_result_5", 2], ["race_result_6", 21], ["race_result_7", 6], ["race_result_8", 3], ["race_result_9", 14], ["race_result_10", 5], ["created_at", "2015-07-23 10:14:16.534650"], ["updated_at", "2015-07-23 10:14:16.534650"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "qly_results" ("round_id", "qly_result_1", "qly_result_2", "qly_result_3", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["round_id", 7], ["qly_result_1", 12], ["qly_result_2", 13], ["qly_result_3", 1], ["created_at", "2015-07-23 10:14:16.538110"], ["updated_at", "2015-07-23 10:14:16.538110"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "rosberg"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "rosberg"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "hamilton"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "hamilton"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "massa"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "vettel"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "vettel"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "bottas"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "hulkenberg"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "maldonado"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "max_verstappen"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "perez"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "ricciardo"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "race_results" ("round_id", "race_result_1", "race_result_2", "race_result_3", "race_result_4", "race_result_5", "race_result_6", "race_result_7", "race_result_8", "race_result_9", "race_result_10", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["round_id", 8], ["race_result_1", 13], ["race_result_2", 12], ["race_result_3", 21], ["race_result_4", 2], ["race_result_5", 20], ["race_result_6", 3], ["race_result_7", 6], ["race_result_8", 19], ["race_result_9", 4], ["race_result_10", 15], ["created_at", "2015-07-23 10:14:19.607173"], ["updated_at", "2015-07-23 10:14:19.607173"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "qly_results" ("round_id", "qly_result_1", "qly_result_2", "qly_result_3", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["round_id", 8], ["qly_result_1", 12], ["qly_result_2", 13], ["qly_result_3", 2], ["created_at", "2015-07-23 10:14:19.610991"], ["updated_at", "2015-07-23 10:14:19.610991"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "hamilton"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "hamilton"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "rosberg"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "rosberg"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "vettel"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "massa"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "massa"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "bottas"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "kvyat"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "hulkenberg"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "raikkonen"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?[0m  [["ergast_driver_id", "perez"]]
+  [1m[35m (0.1ms)[0m  SELECT "drivers"."id" FROM "drivers" WHERE "drivers"."ergast_driver_id" = ?  [["ergast_driver_id", "alonso"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "race_results" ("round_id", "race_result_1", "race_result_2", "race_result_3", "race_result_4", "race_result_5", "race_result_6", "race_result_7", "race_result_8", "race_result_9", "race_result_10", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["round_id", 9], ["race_result_1", 12], ["race_result_2", 13], ["race_result_3", 2], ["race_result_4", 21], ["race_result_5", 20], ["race_result_6", 14], ["race_result_7", 3], ["race_result_8", 1], ["race_result_9", 4], ["race_result_10", 9], ["created_at", "2015-07-23 10:14:22.577786"], ["updated_at", "2015-07-23 10:14:22.577786"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "qly_results" ("round_id", "qly_result_1", "qly_result_2", "qly_result_3", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["round_id", 9], ["qly_result_1", 12], ["qly_result_2", 13], ["qly_result_3", 21], ["created_at", "2015-07-23 10:14:22.581310"], ["updated_at", "2015-07-23 10:14:22.581310"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[35mRound Load (0.1ms)[0m  SELECT  "rounds".* FROM "rounds"  ORDER BY "rounds"."id" ASC LIMIT 1
+  [1m[36mRaceResult Load (0.2ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 1]]
+  [1m[35mQlyResult Load (0.2ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 1]]
