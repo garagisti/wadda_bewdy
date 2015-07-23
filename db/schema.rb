@@ -55,16 +55,16 @@ ActiveRecord::Schema.define(version: 20150718010412) do
 
   create_table "race_results", force: :cascade do |t|
     t.string   "round_id",       null: false
-    t.string   "race_result_1",  null: false
-    t.string   "race_result_2",  null: false
-    t.string   "race_result_3",  null: false
-    t.string   "race_result_4",  null: false
-    t.string   "race_result_5",  null: false
-    t.string   "race_result_6",  null: false
-    t.string   "race_result_7",  null: false
-    t.string   "race_result_8",  null: false
-    t.string   "race_result_9",  null: false
-    t.string   "race_result_10", null: false
+    t.integer  "race_result_1",  null: false
+    t.integer  "race_result_2",  null: false
+    t.integer  "race_result_3",  null: false
+    t.integer  "race_result_4",  null: false
+    t.integer  "race_result_5",  null: false
+    t.integer  "race_result_6",  null: false
+    t.integer  "race_result_7",  null: false
+    t.integer  "race_result_8",  null: false
+    t.integer  "race_result_9",  null: false
+    t.integer  "race_result_10", null: false
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

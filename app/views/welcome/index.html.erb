@@ -4,9 +4,14 @@
         <div class="intro-text">
             <div class="intro-lead-in">Fantasy</div>
             <div class="intro-heading">Formula One</div>
-            <%= link_to 'Sign Me Up!', new_user_session_path, class: "page-scroll btn btn-xl" %>
+            <% if user_signed_in? %>
+                <%= link_to 'Let\'s Play', rounds_path, class: "page-scroll btn btn-xl" %>
+            <% else %>
+                <%= link_to 'Sign Me Up!', new_user_registration_path, class: "page-scroll btn btn-xl" %>
+            <% end %>
         </div>
     </div>
+    <%= render 'shared/flash' %>
 </header>
 
 <!-- About Section -->
