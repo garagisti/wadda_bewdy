@@ -8,5 +8,7 @@ class CreateQlyResults < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :qly_results, :round_id
   end
 end

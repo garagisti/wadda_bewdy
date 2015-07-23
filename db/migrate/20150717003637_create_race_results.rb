@@ -2,18 +2,20 @@ class CreateRaceResults < ActiveRecord::Migration
   def change
     create_table :race_results do |t|
       t.string :round_id, null: false
-      t.string :race_result_1
-      t.string :race_result_2
-      t.string :race_result_3
-      t.string :race_result_4
-      t.string :race_result_5
-      t.string :race_result_6
-      t.string :race_result_7
-      t.string :race_result_8
-      t.string :race_result_9
-      t.string :race_result_10
+      t.string :race_result_1, null: false
+      t.string :race_result_2, null: false
+      t.string :race_result_3, null: false
+      t.string :race_result_4, null: false
+      t.string :race_result_5, null: false
+      t.string :race_result_6, null: false
+      t.string :race_result_7, null: false
+      t.string :race_result_8, null: false
+      t.string :race_result_9, null: false
+      t.string :race_result_10, null: false
 
       t.timestamps null: false
     end
+
+    add_index :race_results, :round_id
   end
 end

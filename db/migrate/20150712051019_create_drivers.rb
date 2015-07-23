@@ -9,5 +9,7 @@ class CreateDrivers < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :drivers, :constructor_id
   end
 end

@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20150718010412) do
     t.datetime "updated_at",         null: false
   end
 
+  add_index "drivers", ["constructor_id"], name: "index_drivers_on_constructor_id"
+
   create_table "qly_results", force: :cascade do |t|
     t.string   "round_id",     null: false
     t.string   "qly_result_1", null: false
@@ -49,32 +51,36 @@ ActiveRecord::Schema.define(version: 20150718010412) do
     t.datetime "updated_at",   null: false
   end
 
+  add_index "qly_results", ["round_id"], name: "index_qly_results_on_round_id"
+
   create_table "race_results", force: :cascade do |t|
     t.string   "round_id",       null: false
-    t.string   "race_result_1"
-    t.string   "race_result_2"
-    t.string   "race_result_3"
-    t.string   "race_result_4"
-    t.string   "race_result_5"
-    t.string   "race_result_6"
-    t.string   "race_result_7"
-    t.string   "race_result_8"
-    t.string   "race_result_9"
-    t.string   "race_result_10"
+    t.string   "race_result_1",  null: false
+    t.string   "race_result_2",  null: false
+    t.string   "race_result_3",  null: false
+    t.string   "race_result_4",  null: false
+    t.string   "race_result_5",  null: false
+    t.string   "race_result_6",  null: false
+    t.string   "race_result_7",  null: false
+    t.string   "race_result_8",  null: false
+    t.string   "race_result_9",  null: false
+    t.string   "race_result_10", null: false
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
 
+  add_index "race_results", ["round_id"], name: "index_race_results_on_round_id"
+
   create_table "rounds", force: :cascade do |t|
-    t.string   "round_number"
-    t.integer  "circuit_id"
-    t.datetime "qly_datetime"
+    t.string   "round_number",  null: false
+    t.integer  "circuit_id",    null: false
+    t.datetime "qly_datetime",  null: false
     t.datetime "race_datetime"
-    t.integer  "qly_results_id"
-    t.integer  "race_results_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
+
+  add_index "rounds", ["circuit_id"], name: "index_rounds_on_circuit_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

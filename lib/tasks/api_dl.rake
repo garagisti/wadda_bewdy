@@ -13,10 +13,10 @@ namespace :api_dl do
   end
 
   task :dl_f1data,[:season] => [:environment] do |t, args|
-    # retrieve_circuits(args.season)
-    # retrieve_rounds(args.season)
-    # retrieve_constructors(args.season)
-    # retrieve_drivers(args.season)
+    retrieve_circuits(args.season)
+    retrieve_rounds(args.season)
+    retrieve_constructors(args.season)
+    retrieve_drivers(args.season)
     retrieve_results_to_date(args.season)
   end
 
@@ -105,9 +105,7 @@ namespace :api_dl do
     Round.create(round_number: round_no,
                   circuit_id: circuit_id,
                   qly_datetime: qly_datetime,
-                  race_datetime: race_datetime,
-                  qly_results_id: qly_results_id,
-                  race_results_id: race_results_id )
+                  race_datetime: race_datetime )
   end
 
   def process_drivers(drivers_feed)
@@ -146,8 +144,6 @@ namespace :api_dl do
                         nationality: nationality)
   end
 
-
-# TODO: Fix me
   def process_round_results(results_feed)
     race_table = results_feed['RaceTable']
     races = race_table['Races']
@@ -160,21 +156,20 @@ namespace :api_dl do
     finishers.each do |finisher|
       driver = finisher['Driver']
         if finisher['position'].to_i <= 10
-          race_result[finisher['position']] = driver['code']
+          race_result[finisher['position']] = get_driver_id(driver)
         end
 
         if finisher['grid'].to_i <= 3
-          qly_result[finisher['grid']] = driver['code']
+          qly_result[finisher['grid']] = get_driver_id(driver)
         end
     end
-    byebug
-    race_result_record = seed_race_result(round, race_result["1"], race_result["2"], race_result["3"],
+
+    seed_race_result(round, race_result["1"], race_result["2"], race_result["3"],
                                       race_result["4"], race_result["5"], race_result["6"],
                                       race_result["7"], race_result["8"], race_result["9"],
                                       race_result["10"])
-    byebug
-    qly_result_record = seed_qly_result(round, qly_result["1"], qly_result["2"], qly_result["3"])
-    update_round_table(round, qly_result_record.id, race_result_record.id)
+    seed_qly_result(round, qly_result["1"], qly_result["2"], qly_result["3"])
+    # update_round_table(round, qly_result_record.id, race_result_record.id)
   end
 
   def seed_race_result(round, first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth)
@@ -191,19 +186,18 @@ namespace :api_dl do
                       race_result_10: tenth)
   end
 
-  def seed_qly_result()
+  def seed_qly_result(round, first, second, third)
         QlyResult.create(round_id: round,
                       qly_result_1: first,
                       qly_result_2: second,
                       qly_result_3: third)
   end
 
-  def update_round_table(round, qly_result_id, race_result_id)
-    # Get the round in question
-    rdr = Round.where(round_number: round)
-    # update the record for race details
-    # update the record for qualy details
-  end
+  # def update_round_table(round, qly_result_id, race_result_id)
+  #   rdr = Round.where(round_number: round).first
+  #   rdr.update_attributes(qly_results_id: qly_result_id,
+  #                         race_results_id: race_result_id)
+  # end
 
   private
 
@@ -217,7 +211,9 @@ namespace :api_dl do
     constructor.ids.first
   end
 
-  def get_driver_id()
+  def get_driver_id(driver_feed)
+    driver = Driver.where(ergast_driver_id: driver_feed['driverId'])
+    driver.ids.first
   end
 
   def calculate_race_datetime(race_date, race_time)
