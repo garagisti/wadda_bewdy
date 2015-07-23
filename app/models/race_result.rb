@@ -6,8 +6,8 @@ class RaceResult < ActiveRecord::Base
                         :race_result_6, :race_result_7, :race_result_8,
                         :race_result_9, :race_result_10
 
-  def to_s
-    Driver.where(id: race_result_1).first
+  def winner
+    Driver.find_by_id(race_result_1)
   end
 
 end

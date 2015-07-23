@@ -22,8 +22,8 @@
             <td><%= round.circuit.name %></td>
             <td><%= round.circuit.locality %></td>
             <td><%= round.circuit.country %></td>
-            <td><%= round.qly_result %></td>
-            <td><%= round.race_result %></td>
+            <td><%= round.qly_result.pole_position unless round.qly_result.nil? %></td>
+            <td><%= round.race_result.winner unless round.race_result.nil? %></td>
             <td>TBA</td>
           </tr>
           <% end %>
