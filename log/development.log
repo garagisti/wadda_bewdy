@@ -33578,3 +33578,1088 @@ Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dd
 
 
 Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 20:19:27 +1000
+
+
+Started GET "/rounds" for ::1 at 2015-07-24 20:25:57 +1000
+Processing by RoundsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRound Load (0.2ms)[0m  SELECT "rounds".* FROM "rounds"
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 1]]
+  [1m[36mDriver Load (0.1ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 2]]
+  [1m[35mDriver Load (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 5]]
+  [1m[36mDriver Load (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 10]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 10]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 11]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 11]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 13]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 14]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 14]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 15]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 15]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 16]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 16]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 17]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 17]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 18]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 18]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 19]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (24.5ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 237ms (Views: 232.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/welcome.self-1882a5e55ae93f18c398e67b5277a45a981b9d14aacc2073341132525d153d61.css?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/rounds.self-80265086a85aff01bb47b4576f38ca891519c09c0709b1bb8e8e31b328e68a54.css?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/tips.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/tips.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 20:25:57 +1000
+
+
+Started GET "/" for ::1 at 2015-07-24 20:27:27 +1000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered welcome/index.html.erb within layouts/welcome (1.7ms)
+Completed 200 OK in 82ms (Views: 81.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-24 20:27:27 +1000
+
+
+Started GET "/rounds" for ::1 at 2015-07-24 20:27:32 +1000
+Processing by RoundsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRound Load (0.1ms)[0m  SELECT "rounds".* FROM "rounds"
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 1]]
+  [1m[36mDriver Load (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 2]]
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 5]]
+  [1m[36mDriver Load (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 10]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 10]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 11]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 11]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 12]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 13]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 13]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 14]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 14]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 15]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 15]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 16]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 16]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 17]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 17]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 18]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 18]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 19]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (25.5ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 122ms (Views: 117.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/tips" for ::1 at 2015-07-24 20:28:27 +1000
+Processing by TipsController#index as HTML
+  Rendered tips/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.5ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 90ms (Views: 89.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-07-24 20:28:32 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ug+8Yi5+TqbbE4gkTnuXYKi8vY+ahsNDjLAbgnnbi7/iyCiF11G7/uh+9+T7d9ua3sSq9Td9MzsHhkuwix8uiw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 20:28:32 +1000
+Processing by WelcomeController#index as HTML
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered welcome/index.html.erb within layouts/welcome (1.0ms)
+Completed 200 OK in 94ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-24 20:28:47 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (2.2ms)
+  Rendered shared/_nav.html.erb (0.4ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered layouts/devise/_container.html.erb (1.4ms)
+Completed 200 OK in 91ms (Views: 90.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-07-24 20:28:59 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MY2Tvte73RUiVJB+TzQR/dAwtzM5dgSvQGZ839s1lcjwwUx2VQUpFb6ryYe8+CA1T8FFFsI9scTgXAB0mvnaFw==", "user"=>{"email"=>"schu82@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "schu82@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-07-24 09:31:21.558651"], ["current_sign_in_at", "2015-07-24 10:29:00.028493"], ["sign_in_count", 4], ["updated_at", "2015-07-24 10:29:00.029175"], ["id", 1]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 78ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 20:29:00 +1000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered welcome/index.html.erb within layouts/welcome (1.5ms)
+Completed 200 OK in 85ms (Views: 84.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/rounds" for ::1 at 2015-07-24 20:29:03 +1000
+Processing by RoundsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRound Load (0.2ms)[0m  SELECT "rounds".* FROM "rounds"
+  [1m[36mCircuit Load (0.2ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 1]]
+  [1m[36mDriver Load (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 2]]
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 5]]
+  [1m[36mDriver Load (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 10]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 10]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 11]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 11]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 13]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 14]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 14]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 15]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 15]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 16]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 16]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 17]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 17]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 18]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 18]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 19]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (29.4ms)
+  Rendered shared/_nav.html.erb (0.2ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 124ms (Views: 120.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/rounds" for ::1 at 2015-07-24 20:30:05 +1000
+Processing by RoundsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRound Load (0.2ms)[0m  [1mSELECT "rounds".* FROM "rounds"[0m
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 1]]
+  [1m[35mDriver Load (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 2]]
+  [1m[36mDriver Load (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 5]]
+  [1m[35mDriver Load (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 10]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 10]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 11]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 11]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 13]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 13]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 14]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 14]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 15]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 15]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 16]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 16]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 17]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 17]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 18]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 18]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 19]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (26.7ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 131ms (Views: 126.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/welcome.self-1882a5e55ae93f18c398e67b5277a45a981b9d14aacc2073341132525d153d61.css?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/tips.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/bootstrap_and_overrides.self-74b8e60cdd48d7660b0a6d331432477b4d18e81a981853d51dd7e794c007f83e.css?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/rounds.self-80265086a85aff01bb47b4576f38ca891519c09c0709b1bb8e8e31b328e68a54.css?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/custom.self-dff1c02359912df9a364d5986188ff06d07a416f3860bb20ac16f4e5bdc2ec98.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/tips.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/rounds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-07-24 20:30:06 +1000
+
+
+Started GET "/" for ::1 at 2015-07-24 20:30:15 +1000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.0ms)
+  Rendered welcome/index.html.erb within layouts/welcome (1.9ms)
+Completed 200 OK in 98ms (Views: 97.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-07-24 20:30:17 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wGU+LJ15XFfHWL8DWqRcftiJ8HiRUEfFfit9AER7toAGYNk/nuHZJw6hTpSBqJ6qSbhJf6+wH5saj1eaSEv5Og=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 20:30:17 +1000
+Processing by WelcomeController#index as HTML
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered welcome/index.html.erb within layouts/welcome (1.0ms)
+Completed 200 OK in 94ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-24 20:30:19 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise/sessions (2.0ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered layouts/devise/_container.html.erb (0.8ms)
+Completed 200 OK in 92ms (Views: 91.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-07-24 20:30:39 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tTuyaLV8eaymtLxDiHZPAiCytZjJcKPKjpi24cKiSIlxJBM2ty4HBALaZLK4XhewMNEGAMNY9Qziz/cVHGfnGA==", "user"=>{"email"=>"schu82@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "schu82@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-07-24 10:29:00.028493"], ["current_sign_in_at", "2015-07-24 10:30:39.166813"], ["sign_in_count", 5], ["updated_at", "2015-07-24 10:30:39.167866"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 72ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 20:30:39 +1000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.2ms)
+  Rendered welcome/index.html.erb within layouts/welcome (1.5ms)
+Completed 200 OK in 102ms (Views: 101.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/rounds" for ::1 at 2015-07-24 20:30:41 +1000
+Processing by RoundsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRound Load (0.2ms)[0m  [1mSELECT "rounds".* FROM "rounds"[0m
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 1]]
+  [1m[35mDriver Load (0.1ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 2]]
+  [1m[36mDriver Load (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 5]]
+  [1m[35mDriver Load (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 10]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 10]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 11]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 11]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 13]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 14]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 14]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 15]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 15]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 16]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 16]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 17]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 17]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 18]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 18]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 19]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (25.5ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 116ms (Views: 111.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 20:38:15 +1000
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered welcome/index.html.erb within layouts/welcome (1.7ms)
+Completed 200 OK in 194ms (Views: 193.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-24 20:38:16 +1000
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_flash.html.erb (0.2ms)
+  Rendered welcome/index.html.erb within layouts/welcome (1.9ms)
+Completed 200 OK in 102ms (Views: 101.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/welcome.self-87de138e59f5570697dcd219b2aee12541cb22803d3b27ac02c16d3f354bc787.css?body=1" for ::1 at 2015-07-24 20:38:16 +1000
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-24 20:38:16 +1000
+
+
+Started GET "/apple-touch-icon-precomposed.png" for ::1 at 2015-07-24 20:38:16 +1000
+
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/garagisti/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/garagisti/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/garagisti/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (22.6ms)
+
+
+Started GET "/apple-touch-icon.png" for ::1 at 2015-07-24 20:38:16 +1000
+
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/garagisti/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/garagisti/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/garagisti/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /Users/garagisti/.rvm/gems/ruby-2.1.5/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (26.2ms)
+
+
+Started GET "/rounds" for ::1 at 2015-07-24 20:38:30 +1000
+Processing by RoundsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRound Load (0.2ms)[0m  SELECT "rounds".* FROM "rounds"
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 1]]
+  [1m[36mDriver Load (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 2]]
+  [1m[35mDriver Load (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 5]]
+  [1m[36mDriver Load (0.1ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 10]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 10]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 11]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 11]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 13]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 14]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 14]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 15]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 15]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 16]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 16]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 17]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 17]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 18]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 18]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 19]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (25.6ms)
+  Rendered shared/_nav.html.erb (0.2ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 126ms (Views: 121.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/tips" for ::1 at 2015-07-24 20:38:41 +1000
+Processing by TipsController#index as HTML
+  Rendered tips/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_nav.html.erb (1.4ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 94.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/rounds" for ::1 at 2015-07-24 20:44:19 +1000
+Processing by RoundsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRound Load (0.1ms)[0m  SELECT "rounds".* FROM "rounds"
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 1]]
+  [1m[36mDriver Load (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 2]]
+  [1m[35mDriver Load (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 5]]
+  [1m[36mDriver Load (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.4ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 10]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 10]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 11]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 11]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 13]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 14]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 14]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 15]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 15]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 16]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 16]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 17]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 17]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 18]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 18]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 19]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (25.5ms)
+  Rendered shared/_nav.html.erb (0.2ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 125ms (Views: 120.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/rounds" for ::1 at 2015-07-24 20:44:19 +1000
+Processing by RoundsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRound Load (0.2ms)[0m  [1mSELECT "rounds".* FROM "rounds"[0m
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 1]]
+  [1m[35mDriver Load (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 2]]
+  [1m[36mDriver Load (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.3ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 5]]
+  [1m[35mDriver Load (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 10]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 10]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 11]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 11]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 12]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 12]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 13]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 13]]
+  [1m[36mCircuit Load (0.1ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mQlyResult Load (0.1ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 14]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 14]]
+  [1m[35mCircuit Load (0.1ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mQlyResult Load (0.1ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 15]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 15]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 16]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 16]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 17]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 17]]
+  [1m[36mCircuit Load (0.0ms)[0m  [1mSELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mQlyResult Load (0.0ms)[0m  SELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1  [["round_id", 18]]
+  [1m[36mRaceResult Load (0.0ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 18]]
+  [1m[35mCircuit Load (0.0ms)[0m  SELECT  "circuits".* FROM "circuits" WHERE "circuits"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mQlyResult Load (0.0ms)[0m  [1mSELECT  "qly_results".* FROM "qly_results" WHERE "qly_results"."round_id" = ? LIMIT 1[0m  [["round_id", 19]]
+  [1m[35mRaceResult Load (0.0ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 19]]
+  Rendered rounds/index.html.erb within layouts/application (27.7ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+  Rendered shared/_flash.html.erb (0.1ms)
+Completed 200 OK in 127ms (Views: 122.6ms | ActiveRecord: 3.4ms)
