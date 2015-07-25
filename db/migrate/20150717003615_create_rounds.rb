@@ -1,4 +1,5 @@
 class CreateRounds < ActiveRecord::Migration
+  # SDP: Pay attention to the formatting of your code, use a tool like Rubocop
   def change
     create_table :rounds do |t|
 

@@ -1,4 +1,5 @@
 <div class="container-fluid">
+  <!-- SDP: Semantically better to use <header> -->
   <h1 class="page-header">F1 2015 Rounds Table</h1>
   <p>Lists the rounds of the 2015 season and tips to date</p>
 
@@ -24,6 +25,7 @@
             <td><%= round.circuit.country %></td>
             <td><%= round.qly_result.pole_position unless round.qly_result.nil? %></td>
             <td><%= round.race_result.winner unless round.race_result.nil? %></td>
+            <!-- SDP: btn btn ? -->
             <td><%= link_to 'Enter Tips', tips_path, class: "btn btn" %></td>
           </tr>
           <% end %>

@@ -1,3 +1,4 @@
+# SDP: Rails auto loads dependent modules, so no need to require it
 require 'json'
 require 'rest-client'
 require 'byebug'
@@ -8,10 +9,13 @@ ERGAST_API_F1 = 'http://ergast.com/api/f1/'
 # Use this rake task to retrieve the circuits for a given season to the schema and to load seed data
 namespace :api_dl do
   desc 'This should be run in development only'
+
+  # SDP: This task appears to not do anything? Why is it here?
   task :dev_only do
     fail 'This task can only be run in the development environment' unless Rails.env.development?
   end
 
+  # SDP: Always put a space after a comma
   task :dl_f1data,[:season] => [:environment] do |t, args|
     retrieve_circuits(args.season)
     retrieve_rounds(args.season)
@@ -22,14 +26,18 @@ namespace :api_dl do
 
   def retrieve_circuits(season)
     puts 'Making API call to Ergast F1 to get Circuits'
+    # SDP: So you have the constant ERGAST_API_F1, but you don't use it
     rest_data = RestClient.get("http://ergast.com/api/f1/#{season}/circuits.json")
     json_data = JSON.parse(rest_data)
     puts 'Processing Circuits'
+    # SDP: Try and keep functions which call each other close by, makes reading the code
+    # easier
     process_circuits(json_data['MRData'])
   end
 
     def retrieve_rounds(season)
     puts 'Making API call to Ergast F1 to get Round details'
+    # SDP: Again, why not use ERGAST_API_F1, more places where this happens
     rest_data = RestClient.get("http://ergast.com/api/f1/#{season}.json")
     json_data = JSON.parse(rest_data)
     puts 'Processing Rounds'
@@ -38,6 +46,9 @@ namespace :api_dl do
 
   def retrieve_constructors(season)
     puts 'Making API call to Ergast F1 to get Constructors'
+    # SDP: This pattern of RESTClient.get & JSON.parse is repeated a lot, so a very
+    # good candidate for placing into a function of it's own, making the code more
+    # readable
     rest_data = RestClient.get("http://ergast.com/api/f1/#{season}/constructors.json")
     json_data = JSON.parse(rest_data)
     puts 'Processing'
@@ -71,6 +82,7 @@ namespace :api_dl do
   end
 
   def process_circuits(feeds)
+    # SDP: Okay to just write curcuits = feeds['CircuitTable']['Circuits']
     circuit_table = feeds['CircuitTable']
     circuits = circuit_table['Circuits']
 
@@ -80,6 +92,8 @@ namespace :api_dl do
     end
   end
 
+  # SDP: Not quite sure why this is in a method on it's own?
+  # Better having all this functionality in process_circuits
   def seed_circuits(code, name, locailty, country)
     Circuit.create(ergast_circuit_code: code,
                    name: name,
@@ -88,11 +102,13 @@ namespace :api_dl do
   end
 
   def process_rounds(feeds)
+    # SDP: Again better in one line races = feeds['RaceTable']['Races']
     race_table = feeds['RaceTable']
     races = race_table['Races']
 
     races.each do |race|
-
+      # SDP: Perhaps you should use Rubocop, it will help you structure your code in a consistent fashion
+      # for maximum legibility
       circuit_id = get_circuit_id(race['Circuit'])
       race_datetime = calculate_race_datetime(race['date'], race['time'])
 
@@ -101,6 +117,7 @@ namespace :api_dl do
     end
   end
 
+  # SDP: 1 line functions usually race question marks in my mind
   def seed_rounds(round_no, circuit_id, qly_datetime, race_datetime, qly_results_id, race_results_id)
     Round.create(round_number: round_no,
                   circuit_id: circuit_id,
@@ -138,12 +155,15 @@ namespace :api_dl do
     end
   end
 
+  # SDP: Again, a 1 line function strikes me as being redundant
   def seed_constructor(code, name, nationality)
     Constructor.create(ergast_constructor_code: code,
                         name: name,
                         nationality: nationality)
   end
 
+  # SDP: I found this function hard to read, especially because of the hash keys
+  # look like magic keys. What does race_result["8"]
   def process_round_results(results_feed)
     race_table = results_feed['RaceTable']
     races = race_table['Races']
@@ -199,18 +219,22 @@ namespace :api_dl do
   #                         race_results_id: race_result_id)
   # end
 
+  # SDP: Adding the private modified in a rake task makes little sense
   private
 
+  # SDP: Simpler if you used Circuit.find_by_ergast_circuit_code
   def get_circuit_id(circuit_feed)
     circuits = Circuit.where(ergast_circuit_code: circuit_feed['circuitId'])
     circuits.ids.first
   end
 
+  # SDP: Simpler if you used Circuit.find_by_ergast_constructor_code
   def get_constructor_id(constructor_feed)
     constructor = Constructor.where(ergast_constructor_code: constructor_feed['constructorId'])
     constructor.ids.first
   end
 
+  # SDP: Simpler if you used Circuit.find_by_ergast_driver_id
   def get_driver_id(driver_feed)
     driver = Driver.where(ergast_driver_id: driver_feed['driverId'])
     driver.ids.first
@@ -222,6 +246,8 @@ namespace :api_dl do
     DateTime.new(r_date.year, r_date.month, r_date.day, r_time.hour, r_time.min, r_time.sec, 0)
   end
 
+  # SDP: These functions are probably best documented for future reference. I find them
+  # to be a little confusing
   def calculate_qly_datetime(race_datetime, circuit)
     case circuit['circuitId']
     when 'americas' || 'villeneuve'
