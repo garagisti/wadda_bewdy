@@ -1,4 +1,4 @@
-class TipsController < ApplicationController
+class TipsController < SessionsController
 
 def index
 end

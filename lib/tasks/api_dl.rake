@@ -22,7 +22,7 @@ namespace :api_dl do
 
   def retrieve_circuits(season)
     puts 'Making API call to Ergast F1 to get Circuits'
-    rest_data = RestClient.get("http://ergast.com/api/f1/#{season}/circuits.json")
+    rest_data = RestClient.get("#{ERGAST_API_F1}#{season}/circuits.json")
     json_data = JSON.parse(rest_data)
     puts 'Processing Circuits'
     process_circuits(json_data['MRData'])
@@ -30,7 +30,7 @@ namespace :api_dl do
 
     def retrieve_rounds(season)
     puts 'Making API call to Ergast F1 to get Round details'
-    rest_data = RestClient.get("http://ergast.com/api/f1/#{season}.json")
+    rest_data = RestClient.get("#{ERGAST_API_F1}#{season}.json")
     json_data = JSON.parse(rest_data)
     puts 'Processing Rounds'
     process_rounds(json_data['MRData'])
@@ -38,7 +38,7 @@ namespace :api_dl do
 
   def retrieve_constructors(season)
     puts 'Making API call to Ergast F1 to get Constructors'
-    rest_data = RestClient.get("http://ergast.com/api/f1/#{season}/constructors.json")
+    rest_data = RestClient.get("#{ERGAST_API_F1}#{season}/constructors.json")
     json_data = JSON.parse(rest_data)
     puts 'Processing'
     process_constructors(json_data['MRData'])
@@ -49,7 +49,7 @@ namespace :api_dl do
     constructors = Constructor.all
     constructors.each do |constructor|
       puts 'Making API call to Ergast F1 to get Drivers by constructor'
-      rest_data = RestClient.get("http://ergast.com/api/f1/#{season}/constructors/#{constructor.ergast_constructor_code}/drivers.json")
+      rest_data = RestClient.get("#{ERGAST_API_F1}#{season}/constructors/#{constructor.ergast_constructor_code}/drivers.json")
       json_data = JSON.parse(rest_data)
       puts 'Processing'
       process_drivers(json_data['MRData'])
@@ -63,7 +63,7 @@ namespace :api_dl do
     # For each race let's do an API call to get all the races to date.
     rounds.times do |n|
       puts 'Making API call to Ergast F1 to get Rounds Result'
-      rest_data = RestClient.get("http://ergast.com/api/f1/#{season}/#{n+1}/results.json?limit=50")
+      rest_data = RestClient.get("#{ERGAST_API_F1}#{season}/#{n+1}/results.json?limit=50")
       json_data = JSON.parse(rest_data)
       puts 'Processing'
       process_round_results(json_data['MRData'])
@@ -116,7 +116,7 @@ namespace :api_dl do
       id = driver['driverId']
       code = driver['code']
       # TODO: Fix this so it's more rubyist and less java-ist.
-      name = driver['givenName'] + " " + driver['familyName']
+      name = driver['givenName'] + ' ' + driver['familyName']
       number = driver['permanentNumber']
       seed_driver(id, code, name, number, constructor_id)
     end
@@ -193,27 +193,18 @@ namespace :api_dl do
                       qly_result_3: third)
   end
 
-  # def update_round_table(round, qly_result_id, race_result_id)
-  #   rdr = Round.where(round_number: round).first
-  #   rdr.update_attributes(qly_results_id: qly_result_id,
-  #                         race_results_id: race_result_id)
-  # end
-
   private
 
   def get_circuit_id(circuit_feed)
-    circuits = Circuit.where(ergast_circuit_code: circuit_feed['circuitId'])
-    circuits.ids.first
+    Circuit.find_by_ergast_circuit_code(circuit_feed['circuitId']).id
   end
 
   def get_constructor_id(constructor_feed)
-    constructor = Constructor.where(ergast_constructor_code: constructor_feed['constructorId'])
-    constructor.ids.first
+    Constructor.find_by_ergast_constructor_code(constructor_feed['constructorId']).id
   end
 
   def get_driver_id(driver_feed)
-    driver = Driver.where(ergast_driver_id: driver_feed['driverId'])
-    driver.ids.first
+    Driver.find_by_ergast_driver_id(driver_feed['driverId']).id
   end
 
   def calculate_race_datetime(race_date, race_time)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150718010412) do
+ActiveRecord::Schema.define(version: 20150725025646) do
 
   create_table "circuits", force: :cascade do |t|
     t.string   "ergast_circuit_code", null: false
@@ -81,6 +81,29 @@ ActiveRecord::Schema.define(version: 20150718010412) do
   end
 
   add_index "rounds", ["circuit_id"], name: "index_rounds_on_circuit_id"
+
+  create_table "tips", force: :cascade do |t|
+    t.integer  "user_id",     null: false
+    t.integer  "round_id",    null: false
+    t.integer  "qly_tip_1"
+    t.integer  "qly_tip_2"
+    t.integer  "qly_tip_3"
+    t.integer  "race_tip_1"
+    t.integer  "race_tip_2"
+    t.integer  "race_tip_3"
+    t.integer  "race_tip_4"
+    t.integer  "race_tip_5"
+    t.integer  "race_tip_6"
+    t.integer  "race_tip_7"
+    t.integer  "race_tip_8"
+    t.integer  "race_tip_9"
+    t.integer  "race_tip_10"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "tips", ["round_id"], name: "index_tips_on_round_id"
+  add_index "tips", ["user_id"], name: "index_tips_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

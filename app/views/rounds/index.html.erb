@@ -12,7 +12,7 @@
           <th>Country</th>
           <th>Pole Position</th>
           <th>Race Winner</th>
-          <th>Tips Entered?</th>
+          <th>Tips</th>
         </tr>
       </thead>
       <tbody>
@@ -24,7 +24,13 @@
             <td><%= round.circuit.country %></td>
             <td><%= round.qly_result.pole_position unless round.qly_result.nil? %></td>
             <td><%= round.race_result.winner unless round.race_result.nil? %></td>
-            <td><%= link_to 'Enter Tips', tips_path, class: "btn btn" %></td>
+            <td>
+              <% if round.is_current? %>
+                <%= link_to 'Enter Tips', tips_path, class: "btn btn-wadda-bewdy" %>
+              <% else %>
+                Round Closed
+              <% end %>
+            </td>
           </tr>
           <% end %>
       </tbody>

@@ -56,3 +56,52 @@
     color: #fed136;
     font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive
 }
+
+/* Button Medium Stylings */
+
+.btn-wadda-bewdy {
+    color: #fff;
+    background-color: #fed136;
+    border-color: #fed136;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-radius: 3px;
+}
+.btn-wadda-bewdy:hover,
+.btn-wadda-bewdy:focus,
+.btn-wadda-bewdy:active,
+.btn-wadda-bewdy.active,
+.open .dropdown-toggle.btn-wadda-bewdy {
+    color: #fff;
+    background-color: #fec503;
+    border-color: #f6bf01
+}
+.btn-wadda-bewdy:active,
+.btn-wadda-bewdy.active,
+.open .dropdown-toggle.btn-wadda-bewdy {
+    background-image: none
+}
+.btn-wadda-bewdy.disabled,
+.btn-wadda-bewdy[disabled],
+fieldset[disabled] .btn-wadda-bewdy,
+.btn-wadda-bewdy.disabled:hover,
+.btn-wadda-bewdy[disabled]:hover,
+fieldset[disabled] .btn-wadda-bewdy:hover,
+.btn-wadda-bewdy.disabled:focus,
+.btn-wadda-bewdy[disabled]:focus,
+fieldset[disabled] .btn-wadda-bewdy:focus,
+.btn-wadda-bewdy.disabled:active,
+.btn-wadda-bewdy[disabled]:active,
+fieldset[disabled] .btn-wadda-bewdy:active,
+.btn-wadda-bewdy.disabled.active,
+.btn-wadda-bewdy[disabled].active,
+fieldset[disabled] .btn-wadda-bewdy.active {
+    background-color: #fed136;
+    border-color: #fed136
+}
+.btn-wadda-bewdy .badge {
+    color: #fed136;
+    background-color: #fff
+}
+
