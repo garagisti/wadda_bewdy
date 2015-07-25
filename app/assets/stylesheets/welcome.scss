@@ -160,15 +160,15 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .kaushan-font {
-    /*color: #fed136;*/
-    color: #fec503;
-    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive
+    font-color: #fec503;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+    font-size: 1.5em;
 }
 
 .montserrat-font {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    font-weight: 600
+    font-weight: 100;
 }
 
 .navbar-default .navbar-brand:hover,
