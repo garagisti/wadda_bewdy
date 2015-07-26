@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+wsource 'https://rubygems.org'
 
 
 # Universally inclusive gems for the application
@@ -39,4 +39,3 @@ group :production do
   gem 'pg',                 '~>0.18'
   gem 'rails_12factor'
 end
-

@@ -1,5 +1,7 @@
 class CreateRaceResults < ActiveRecord::Migration
   def change
+    # SDP: Are you sure all the race_results are not nullable? What if less than
+    # 10 cars finish a race? It is possible
     create_table :race_results do |t|
       t.integer :round_id, null: false
       t.integer :race_result_1, null: false

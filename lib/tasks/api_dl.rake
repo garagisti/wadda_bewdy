@@ -7,6 +7,7 @@ ERGAST_API_F1 = 'http://ergast.com/api/f1/'
 
 # Use this rake task to retrieve the circuits for a given season to the schema and to load seed data
 namespace :api_dl do
+
   task :dl_f1data, [:season] => [:environment] do |t, args|
     retrieve_circuits(args.season)
     retrieve_rounds(args.season)
@@ -20,6 +21,8 @@ namespace :api_dl do
     rest_data = RestClient.get("#{ERGAST_API_F1}#{season}/circuits.json")
     json_data = JSON.parse(rest_data)
     puts 'Processing Circuits'
+    # TODO: SDP: Try and keep functions which call each other close by, makes reading the code
+    # easier
     process_circuits(json_data['MRData'])
   end
 
@@ -33,6 +36,10 @@ namespace :api_dl do
 
   def retrieve_constructors(season)
     puts 'Making API call to Ergast F1 to get Constructors'
+
+    # TODO: SDP: This pattern of RESTClient.get & JSON.parse is repeated a lot, so a very
+    # good candidate for placing into a function of it's own, making the code more
+    # readable
     rest_data = RestClient.get("#{ERGAST_API_F1}#{season}/constructors.json")
     json_data = JSON.parse(rest_data)
     puts 'Processing'
@@ -66,6 +73,7 @@ namespace :api_dl do
   end
 
   def process_circuits(feeds)
+    # TODO: SDP: Okay to just write curcuits = feeds['CircuitTable']['Circuits']
     circuit_table = feeds['CircuitTable']
     circuits = circuit_table['Circuits']
 
@@ -75,6 +83,8 @@ namespace :api_dl do
     end
   end
 
+  # TODO: SDP: Not quite sure why this is in a method on it's own?
+  # Better having all this functionality in process_circuits
   def seed_circuits(code, name, locailty, country)
     Circuit.create(ergast_circuit_code: code,
                    name: name,
@@ -83,11 +93,13 @@ namespace :api_dl do
   end
 
   def process_rounds(feeds)
+    # TODO: SDP: Again better in one line races = feeds['RaceTable']['Races']
     race_table = feeds['RaceTable']
     races = race_table['Races']
 
     races.each do |race|
-
+      # TODO: SDP: Perhaps you should use Rubocop, it will help you structure your code in a consistent fashion
+      # for maximum legibility
       circuit_id = get_circuit_id(race['Circuit'])
       race_datetime = calculate_race_datetime(race['date'], race['time'])
 
@@ -96,6 +108,7 @@ namespace :api_dl do
     end
   end
 
+  # TODO: SDP: 1 line functions usually race question marks in my mind
   def seed_rounds(round_no, circuit_id, qly_datetime, race_datetime, qly_results_id, race_results_id)
     Round.create(round_number: round_no,
                   circuit_id: circuit_id,
@@ -133,12 +146,15 @@ namespace :api_dl do
     end
   end
 
+  # TODO: SDP: Again, a 1 line function strikes me as being redundant
   def seed_constructor(code, name, nationality)
     Constructor.create(ergast_constructor_code: code,
                         name: name,
                         nationality: nationality)
   end
 
+  # TODO: SDP: I found this function hard to read, especially because of the hash keys
+  # look like magic keys. What does race_result["8"]
   def process_round_results(results_feed)
     race_table = results_feed['RaceTable']
     races = race_table['Races']
@@ -164,7 +180,6 @@ namespace :api_dl do
                                       race_result["7"], race_result["8"], race_result["9"],
                                       race_result["10"])
     seed_qly_result(round, qly_result["1"], qly_result["2"], qly_result["3"])
-    # update_round_table(round, qly_result_record.id, race_result_record.id)
   end
 
   def seed_race_result(round, first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth)
@@ -188,8 +203,6 @@ namespace :api_dl do
                       qly_result_3: third)
   end
 
-  private
-
   def get_circuit_id(circuit_feed)
     Circuit.find_by_ergast_circuit_code(circuit_feed['circuitId']).id
   end
@@ -208,6 +221,8 @@ namespace :api_dl do
     DateTime.new(r_date.year, r_date.month, r_date.day, r_time.hour, r_time.min, r_time.sec, 0)
   end
 
+  # TODO: SDP: These functions are probably best documented for future reference. I find them
+  # to be a little confusing
   def calculate_qly_datetime(race_datetime, circuit)
     case circuit['circuitId']
     when 'americas' || 'villeneuve'
