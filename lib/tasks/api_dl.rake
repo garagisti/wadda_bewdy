@@ -1,18 +1,13 @@
-require 'json'
-require 'rest-client'
-require 'byebug'
-require 'Date'
+# require 'json'
+# require 'rest-client'
+# require 'byebug'
+# require 'Date'
 
 ERGAST_API_F1 = 'http://ergast.com/api/f1/'
 
 # Use this rake task to retrieve the circuits for a given season to the schema and to load seed data
 namespace :api_dl do
-  desc 'This should be run in development only'
-  task :dev_only do
-    fail 'This task can only be run in the development environment' unless Rails.env.development?
-  end
-
-  task :dl_f1data,[:season] => [:environment] do |t, args|
+  task :dl_f1data, [:season] => [:environment] do |t, args|
     retrieve_circuits(args.season)
     retrieve_rounds(args.season)
     retrieve_constructors(args.season)

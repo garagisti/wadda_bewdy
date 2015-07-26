@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WaddaBewdy</title>
+    <title>Wadda Bewdy</title>
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
       <%= csrf_meta_tags %>
@@ -19,6 +19,9 @@
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar">
         <ul class="nav nav-inverse nav-sidebar montserrat-font">
+          <li>
+            <%= link_to 'Rounds Home', rounds_path %>
+          </li>
           <li>
             <a href="#">My Tips</a>
           </li>

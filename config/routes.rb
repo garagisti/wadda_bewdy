@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
-  devise_for :users
-  resources :rounds, only: [:index, :show]
-  resources :tips, only: [:index]
+
+  resources :rounds, only: [:index, :show] do
+    resources :tips, only: [:index, :new, :create, :edit]
+  end
+  # This is for the one user to many tips
+  # devise_for :users
+  devise_for :users do
+    resources :tips, only: [:index, :new, :create, :edit]
+  end
 
   root to: 'welcome#index'
-
 
 end

@@ -1,0 +1,72 @@
+<%= form_for @tip, html: {} do |f| %>
+  <div class="container-fluid">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Qualy Tips</h3>
+      </div>
+      <div class="panel-body">
+        <div class="form-group">
+          <%= f.label 'Pole' %>
+          <%= f.select :qly_tip_1, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label 'Second' %>
+          <%= f.select :qly_tip_2, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label 'Third' %>
+          <%= f.select :qly_tip_3, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Race Tips</h3>
+      </div>
+      <div class="panel-body">
+        <div class="form-group">
+          <%= f.label 'Winner' %>
+          <%= f.select :race_tip_1, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label 'Second' %>
+          <%= f.select :race_tip_2, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label 'Third' %>
+          <%= f.select :race_tip_3, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label 'Fourth' %>
+          <%= f.select :race_tip_4, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label 'Fifth' %>
+          <%= f.select :race_tip_5, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label 'Sixth' %>
+          <%= f.select :race_tip_6, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+        </div>
+          <div class="form-group">
+          <%= f.label 'Seventh' %>
+          <%= f.select :race_tip_7, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label 'Eighth' %>
+          <%= f.select :race_tip_8, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label 'Ninth' %>
+          <%= f.select :race_tip_9, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label 'Tenth' %>
+          <%= f.select :race_tip_10, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+        </div>
+      </div>
+    </div>
+    <%= f.submit 'Save', class: 'btn btn-wadda-bewdy' %>
+  </div>
+<% end %>

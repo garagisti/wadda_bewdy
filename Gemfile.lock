@@ -244,7 +244,7 @@ DEPENDENCIES
   pg (~> 0.18)
   rails (~> 4.2)
   rails-erd (~> 1.4)
-  rails_12factor (~> 0.0.2)
+  rails_12factor
   rest-client (~> 1.8)
   ruby-graphviz (~> 1.2)
   sass-rails (~> 5.0)
