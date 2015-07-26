@@ -7,6 +7,11 @@ class RoundsController < SessionsController
   end
 
   def show
-    # This will show a nice view of the round
+    begin
+      @rounds = Round.find(params[:id])
+      @circuit = Circuit.find_by_id(@rounds.circuit_id)
+    rescue
+      redirect_to rounds_path
+    end
   end
 end

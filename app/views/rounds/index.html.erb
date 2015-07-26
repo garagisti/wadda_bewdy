@@ -20,7 +20,7 @@
         <% @rounds.each do |round| %>
           <tr>
             <td><%= round.round_number %></td>
-            <td><%= round.circuit.name %></td>
+            <td><%= link_to round.circuit.name, round %></td>
             <td><%= round.circuit.locality %></td>
             <td><%= round.circuit.country %></td>
             <td><%= round.qly_result.pole_position unless round.qly_result.nil? %></td>

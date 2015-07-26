@@ -1,4 +1,4 @@
-class TipsController < SessionsController
+class TipController < SessionsController
 
   def index
     if params.has_key?(:round_id)

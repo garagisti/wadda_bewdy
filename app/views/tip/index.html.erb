@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <h1 class="page-header">Tips Index</h1>
+  <p>A list of tips for the user?</p>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped" role="grid">
+      <thead>
+        <tr>
+          <th>Round no</th>
+          <th>Circuit Name</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @rounds.each do |round| %>
+          <tr>
+            <td><%= round.round_number %></td>
+            <td><%= link_to round.circuit.name, round %></td>
+            <td><%= round.calulate_points %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
