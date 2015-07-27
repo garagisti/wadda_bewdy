@@ -3584,3 +3584,22 @@ Completed 200 OK in 90ms (Views: 89.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-26 21:19:29 +1000
+
+
+Started GET "/" for ::1 at 2015-07-26 21:26:02 +1000
+Processing by WelcomeController#index as HTML
+  Rendered shared/_flash.html.erb (0.1ms)
+  Rendered welcome/index.html.erb within layouts/welcome (0.9ms)
+Completed 200 OK in 87ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 21:26:02 +1000
+
+
+Started GET "/assets/tip.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-26 21:26:02 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-26 21:26:02 +1000
+
+
+Started GET "/assets/alonso-header-bg.jpg" for ::1 at 2015-07-26 21:26:02 +1000
