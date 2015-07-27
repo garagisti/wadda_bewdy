@@ -1,8 +1,6 @@
 <div class="row">
   <div class="col-sm-12">
-    <header>
-      <h2>Log in</h2>
-    </header>
+      <h2 class="page-header">Log in</h2>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form well' }) do |f| %>
       <div class="form-group">
         <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'email address' %>
