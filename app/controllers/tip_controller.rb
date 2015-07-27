@@ -1,12 +1,8 @@
 class TipController < SessionsController
 
   def index
-    if params.has_key?(:round_id)
-      @round = Round.find(params[:round_id])
-      @tip = @round.tip
-    else
-      @tip = Tip.new
-    end
+    @rounds = Round.all
+    @user = User.find_by_id(current_user.id)
   end
 
   # GET /tips/new

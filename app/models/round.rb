@@ -11,24 +11,30 @@ class Round < ActiveRecord::Base
   # Is the current round on?
   def is_current?
     race_datetime > (DateTime.current - 1.hour) &&
-    !(race_datetime > (DateTime.current + 1.week))
+    !(race_datetime > (DateTime.current + 5.weeks))
   end
 
-  def calulate_points
+  def calulate_points(user)
     # user = User.find_by_id(user_id)
-    byebug
-    user_tip = Tip.where("user_id = ? AND round_id = ?",current_user.id,round_id).first
-    qly_result = QlyResult.find_by_round_id(round_id)
-    race_result = RaceResult.find_by_round_id(round_id)
+    user_tip = Tip.where("user_id = ? AND round_id = ?",user.id,id).first
+    qly_result = QlyResult.find_by_round_id(id)
+    race_result = RaceResult.find_by_round_id(id)
 
     points = 0
-    calulate_qly_points(points)
-    calulate_race_points(points)
+
+    if (!user_tip.nil? && !qly_result.nil?)
+      calulate_qly_points(user_tip, qly_result, points)
+    end
+
+    if (!user_tip.nil? && !race_result.nil?)
+      calulate_race_points(user_tip, race_result, points)
+    end
+
   end
 
   private
 
-  def calulate_qly_points(points)
+  def calulate_qly_points(user_tip, qly_result, points)
     # Points for Pole
     if user_tip.qly_tip_1 == qly_result.qly_result_1
       points += 10
@@ -55,10 +61,13 @@ class Round < ActiveRecord::Base
     elsif user_tip.qly_tip_3 == qly_result.qly_result_3
       points += 10
     end
+
+    return points
   end
 
-  def calulate_race_points(points)
+  def calulate_race_points(user_tip, race_result, points)
     # Points for Winner
+
     if user_tip.race_tip_1 == race_result.race_result_1
       points += 15
     elsif user_tip.race_tip_1 == race_result.race_result_2
@@ -219,7 +228,7 @@ class Round < ActiveRecord::Base
       points += 8
     end
 
-    # Points for 8rd in race
+    # Points for 8th in race
     if user_tip.race_tip_8 == race_result.race_result_1
       points += 3
     elsif user_tip.race_tip_8 == race_result.race_result_2
@@ -242,7 +251,7 @@ class Round < ActiveRecord::Base
       points += 10
     end
 
-        # Points for 9th in race
+    # Points for 9th in race
     if user_tip.race_tip_9 == race_result.race_result_1
       points += 2
     elsif user_tip.race_tip_9 == race_result.race_result_2
@@ -287,6 +296,8 @@ class Round < ActiveRecord::Base
     elsif user_tip.race_tip_10 == race_result.race_result_10
       points += 15
     end
+
+    return points
   end
 
 end
