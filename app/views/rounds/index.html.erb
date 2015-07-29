@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <!-- SDP: Semantically better to use <header> -->
   <h1 class="page-header">F1 2015 Rounds Table</h1>
-  <p>Lists the rounds of the 2015 season and tips to date</p>
+  <p>Your tips for The 2015 season.</p>
 
   <div class="table-responsive">
     <table class="table table-striped" role="grid">
@@ -26,8 +26,14 @@
             <td><%= round.qly_result.pole_position unless round.qly_result.nil? %></td>
             <td><%= round.race_result.winner unless round.race_result.nil? %></td>
             <td>
-              <% if round.is_current? %>
-                <%= link_to 'Enter Tips', new_round_tip_path(round), class: "btn btn-wadda-bewdy" %>
+              <% if round.is_current? && !round.in_the_past? %>
+                <% if current_user.has_tipped?(round.id) %>
+                  <%= link_to 'Update Tips', edit_user_tip_path(round), class: "btn btn-wadda-bewdy" %>
+                <% else %>
+                  <%= link_to 'Enter Tips', new_user_tip_path(round_id: round.id), class: "btn btn-wadda-bewdy" %>
+                <% end %>
+              <% elsif !round.is_current? && round.in_the_past? %>
+                <%= link_to 'My Tip Results', user_tip_path(round), class: "btn btn-wadda-bewdy" %>
               <% else %>
                 Round Closed
               <% end %>

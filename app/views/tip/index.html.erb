@@ -17,7 +17,7 @@
           <tr>
             <td><%= round.round_number %></td>
             <td><%= link_to round.circuit.name, round %></td>
-            <td><%= round.calulate_points(@user) %></td>
+            <td><%= round.calulate_round_points(@user) %></td>
           </tr>
         <% end %>
       </tbody>

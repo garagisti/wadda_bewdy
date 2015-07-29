@@ -8,14 +8,43 @@ class Round < ActiveRecord::Base
 
   attr_reader :round_id
 
+  def circuit_name(circuit_id)
+    Circuit.find_by_id(circuit_id)
+  end
+
+  def circuit_name_via_round_id(round_id)
+
+  end
+
   # Is the current round on?
   def is_current?
     race_datetime > (DateTime.current - 1.hour) &&
     !(race_datetime > (DateTime.current + 5.weeks))
   end
 
-  def calulate_points(user)
-    # user = User.find_by_id(user_id)
+  # Is the race in the past?
+  def in_the_past?
+    race_datetime < DateTime.current
+  end
+
+  def get_latest_round_results(round_id)
+
+    round = Round.find_by_id(round_id)
+    race_result = RaceResult.find_by_round_id(round_id)
+
+    # if the round has occured data isn't in the db for this round.
+    if (round.race_datetime < DateTime.current) && race_result.nil?
+      # make an API call
+      call_ergast_for_round_results(round_id)
+    else
+      flash[:alert] = 'results aready up to date'
+    end
+
+  end
+
+  # Calculate Points
+  def calulate_round_points(user)
+
     user_tip = Tip.where("user_id = ? AND round_id = ?",user.id,id).first
     qly_result = QlyResult.find_by_round_id(id)
     race_result = RaceResult.find_by_round_id(id)
@@ -34,6 +63,8 @@ class Round < ActiveRecord::Base
 
   private
 
+  # TODO: Fix this - perhaps use a hash and use the
+  # Key to determine difference between result and tip
   def calulate_qly_points(user_tip, qly_result, points)
     # Points for Pole
     if user_tip.qly_tip_1 == qly_result.qly_result_1
@@ -65,6 +96,8 @@ class Round < ActiveRecord::Base
     return points
   end
 
+  # TODO: Fix this - perhaps use a hash and use the
+  # Key to determine difference between result and tip
   def calulate_race_points(user_tip, race_result, points)
     # Points for Winner
 

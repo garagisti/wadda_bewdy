@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <h1 class="page-header">User League Results</h1>
+  <p>Results of All Users</p>
+
+  <div class="table-responsive">
+    <table class="table table-striped" role="grid">
+      <thead>
+        <tr>
+          <th>User Id</th>
+          <th>User email</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.id %></td>
+            <td><%= user.email %></td>
+            <td>points</td>
+          </tr>
+          <% end %>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+</div>

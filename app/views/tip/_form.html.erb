@@ -1,21 +1,83 @@
-<%= form_for @tip, new_round_tip_path(@round), html: {} do |f| %>
+<%= form_for @tip, url: user_tip_index_path, html: {} do |f| %>
   <div class="container-fluid">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">Qualy Tips</h3>
       </div>
       <div class="panel-body">
+
         <div class="form-group">
           <%= f.label 'Pole' %>
-          <%= f.select :qly_tip_1, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+          <%= f.select :qly_tip_1, [[@drivers[0].name, @drivers[0].id],
+                                    [@drivers[1].name, @drivers[1].id],
+                                    [@drivers[2].name, @drivers[2].id],
+                                    [@drivers[3].name, @drivers[3].id],
+                                    [@drivers[4].name, @drivers[4].id],
+                                    [@drivers[5].name, @drivers[5].id],
+                                    [@drivers[6].name, @drivers[6].id],
+                                    [@drivers[7].name, @drivers[7].id],
+                                    [@drivers[8].name, @drivers[8].id],
+                                    [@drivers[9].name, @drivers[9].id],
+                                    [@drivers[10].name, @drivers[10].id],
+                                    [@drivers[11].name, @drivers[11].id],
+                                    [@drivers[12].name, @drivers[12].id],
+                                    [@drivers[13].name, @drivers[13].id],
+                                    [@drivers[14].name, @drivers[14].id],
+                                    [@drivers[15].name, @drivers[15].id],
+                                    [@drivers[16].name, @drivers[16].id],
+                                    [@drivers[17].name, @drivers[17].id],
+                                    [@drivers[18].name, @drivers[18].id],
+                                    [@drivers[19].name, @drivers[19].id],
+                                    [@drivers[20].name, @drivers[20].id]], {}, class: 'form-control' %>
         </div>
+
         <div class="form-group">
           <%= f.label 'Second' %>
-          <%= f.select :qly_tip_2, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+          <%= f.select :qly_tip_2, [[@drivers[0].name, @drivers[0].id],
+                                    [@drivers[1].name, @drivers[1].id],
+                                    [@drivers[2].name, @drivers[2].id],
+                                    [@drivers[3].name, @drivers[3].id],
+                                    [@drivers[4].name, @drivers[4].id],
+                                    [@drivers[5].name, @drivers[5].id],
+                                    [@drivers[6].name, @drivers[6].id],
+                                    [@drivers[7].name, @drivers[7].id],
+                                    [@drivers[8].name, @drivers[8].id],
+                                    [@drivers[9].name, @drivers[9].id],
+                                    [@drivers[10].name, @drivers[10].id],
+                                    [@drivers[11].name, @drivers[11].id],
+                                    [@drivers[12].name, @drivers[12].id],
+                                    [@drivers[13].name, @drivers[13].id],
+                                    [@drivers[14].name, @drivers[14].id],
+                                    [@drivers[15].name, @drivers[15].id],
+                                    [@drivers[16].name, @drivers[16].id],
+                                    [@drivers[17].name, @drivers[17].id],
+                                    [@drivers[18].name, @drivers[18].id],
+                                    [@drivers[19].name, @drivers[19].id],
+                                    [@drivers[20].name, @drivers[20].id]], {}, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label 'Third' %>
-          <%= f.select :qly_tip_3, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+          <%= f.select :qly_tip_3, [[@drivers[0].name, @drivers[0].id],
+                                    [@drivers[1].name, @drivers[1].id],
+                                    [@drivers[2].name, @drivers[2].id],
+                                    [@drivers[3].name, @drivers[3].id],
+                                    [@drivers[4].name, @drivers[4].id],
+                                    [@drivers[5].name, @drivers[5].id],
+                                    [@drivers[6].name, @drivers[6].id],
+                                    [@drivers[7].name, @drivers[7].id],
+                                    [@drivers[8].name, @drivers[8].id],
+                                    [@drivers[9].name, @drivers[9].id],
+                                    [@drivers[10].name, @drivers[10].id],
+                                    [@drivers[11].name, @drivers[11].id],
+                                    [@drivers[12].name, @drivers[12].id],
+                                    [@drivers[13].name, @drivers[13].id],
+                                    [@drivers[14].name, @drivers[14].id],
+                                    [@drivers[15].name, @drivers[15].id],
+                                    [@drivers[16].name, @drivers[16].id],
+                                    [@drivers[17].name, @drivers[17].id],
+                                    [@drivers[18].name, @drivers[18].id],
+                                    [@drivers[19].name, @drivers[19].id],
+                                    [@drivers[20].name, @drivers[20].id]], {}, class: 'form-control' %>
         </div>
       </div>
     </div>
@@ -27,46 +89,248 @@
       <div class="panel-body">
         <div class="form-group">
           <%= f.label 'Winner' %>
-          <%= f.select :race_tip_1, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+          <%= f.select :race_tip_1, [[@drivers[0].name, @drivers[0].id],
+                                    [@drivers[1].name, @drivers[1].id],
+                                    [@drivers[2].name, @drivers[2].id],
+                                    [@drivers[3].name, @drivers[3].id],
+                                    [@drivers[4].name, @drivers[4].id],
+                                    [@drivers[5].name, @drivers[5].id],
+                                    [@drivers[6].name, @drivers[6].id],
+                                    [@drivers[7].name, @drivers[7].id],
+                                    [@drivers[8].name, @drivers[8].id],
+                                    [@drivers[9].name, @drivers[9].id],
+                                    [@drivers[10].name, @drivers[10].id],
+                                    [@drivers[11].name, @drivers[11].id],
+                                    [@drivers[12].name, @drivers[12].id],
+                                    [@drivers[13].name, @drivers[13].id],
+                                    [@drivers[14].name, @drivers[14].id],
+                                    [@drivers[15].name, @drivers[15].id],
+                                    [@drivers[16].name, @drivers[16].id],
+                                    [@drivers[17].name, @drivers[17].id],
+                                    [@drivers[18].name, @drivers[18].id],
+                                    [@drivers[19].name, @drivers[19].id],
+                                    [@drivers[20].name, @drivers[20].id]], {}, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label 'Second' %>
-          <%= f.select :race_tip_2, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+          <%= f.select :race_tip_2, [[@drivers[0].name, @drivers[0].id],
+                                    [@drivers[1].name, @drivers[1].id],
+                                    [@drivers[2].name, @drivers[2].id],
+                                    [@drivers[3].name, @drivers[3].id],
+                                    [@drivers[4].name, @drivers[4].id],
+                                    [@drivers[5].name, @drivers[5].id],
+                                    [@drivers[6].name, @drivers[6].id],
+                                    [@drivers[7].name, @drivers[7].id],
+                                    [@drivers[8].name, @drivers[8].id],
+                                    [@drivers[9].name, @drivers[9].id],
+                                    [@drivers[10].name, @drivers[10].id],
+                                    [@drivers[11].name, @drivers[11].id],
+                                    [@drivers[12].name, @drivers[12].id],
+                                    [@drivers[13].name, @drivers[13].id],
+                                    [@drivers[14].name, @drivers[14].id],
+                                    [@drivers[15].name, @drivers[15].id],
+                                    [@drivers[16].name, @drivers[16].id],
+                                    [@drivers[17].name, @drivers[17].id],
+                                    [@drivers[18].name, @drivers[18].id],
+                                    [@drivers[19].name, @drivers[19].id],
+                                    [@drivers[20].name, @drivers[20].id]], {}, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label 'Third' %>
-          <%= f.select :race_tip_3, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+          <%= f.select :race_tip_3, [[@drivers[0].name, @drivers[0].id],
+                                    [@drivers[1].name, @drivers[1].id],
+                                    [@drivers[2].name, @drivers[2].id],
+                                    [@drivers[3].name, @drivers[3].id],
+                                    [@drivers[4].name, @drivers[4].id],
+                                    [@drivers[5].name, @drivers[5].id],
+                                    [@drivers[6].name, @drivers[6].id],
+                                    [@drivers[7].name, @drivers[7].id],
+                                    [@drivers[8].name, @drivers[8].id],
+                                    [@drivers[9].name, @drivers[9].id],
+                                    [@drivers[10].name, @drivers[10].id],
+                                    [@drivers[11].name, @drivers[11].id],
+                                    [@drivers[12].name, @drivers[12].id],
+                                    [@drivers[13].name, @drivers[13].id],
+                                    [@drivers[14].name, @drivers[14].id],
+                                    [@drivers[15].name, @drivers[15].id],
+                                    [@drivers[16].name, @drivers[16].id],
+                                    [@drivers[17].name, @drivers[17].id],
+                                    [@drivers[18].name, @drivers[18].id],
+                                    [@drivers[19].name, @drivers[19].id],
+                                    [@drivers[20].name, @drivers[20].id]], {}, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label 'Fourth' %>
-          <%= f.select :race_tip_4, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+          <%= f.select :race_tip_4, [[@drivers[0].name, @drivers[0].id],
+                                    [@drivers[1].name, @drivers[1].id],
+                                    [@drivers[2].name, @drivers[2].id],
+                                    [@drivers[3].name, @drivers[3].id],
+                                    [@drivers[4].name, @drivers[4].id],
+                                    [@drivers[5].name, @drivers[5].id],
+                                    [@drivers[6].name, @drivers[6].id],
+                                    [@drivers[7].name, @drivers[7].id],
+                                    [@drivers[8].name, @drivers[8].id],
+                                    [@drivers[9].name, @drivers[9].id],
+                                    [@drivers[10].name, @drivers[10].id],
+                                    [@drivers[11].name, @drivers[11].id],
+                                    [@drivers[12].name, @drivers[12].id],
+                                    [@drivers[13].name, @drivers[13].id],
+                                    [@drivers[14].name, @drivers[14].id],
+                                    [@drivers[15].name, @drivers[15].id],
+                                    [@drivers[16].name, @drivers[16].id],
+                                    [@drivers[17].name, @drivers[17].id],
+                                    [@drivers[18].name, @drivers[18].id],
+                                    [@drivers[19].name, @drivers[19].id],
+                                    [@drivers[20].name, @drivers[20].id]], {}, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label 'Fifth' %>
-          <%= f.select :race_tip_5, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+          <%= f.select :race_tip_5, [[@drivers[0].name, @drivers[0].id],
+                                    [@drivers[1].name, @drivers[1].id],
+                                    [@drivers[2].name, @drivers[2].id],
+                                    [@drivers[3].name, @drivers[3].id],
+                                    [@drivers[4].name, @drivers[4].id],
+                                    [@drivers[5].name, @drivers[5].id],
+                                    [@drivers[6].name, @drivers[6].id],
+                                    [@drivers[7].name, @drivers[7].id],
+                                    [@drivers[8].name, @drivers[8].id],
+                                    [@drivers[9].name, @drivers[9].id],
+                                    [@drivers[10].name, @drivers[10].id],
+                                    [@drivers[11].name, @drivers[11].id],
+                                    [@drivers[12].name, @drivers[12].id],
+                                    [@drivers[13].name, @drivers[13].id],
+                                    [@drivers[14].name, @drivers[14].id],
+                                    [@drivers[15].name, @drivers[15].id],
+                                    [@drivers[16].name, @drivers[16].id],
+                                    [@drivers[17].name, @drivers[17].id],
+                                    [@drivers[18].name, @drivers[18].id],
+                                    [@drivers[19].name, @drivers[19].id],
+                                    [@drivers[20].name, @drivers[20].id]], {}, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label 'Sixth' %>
-          <%= f.select :race_tip_6, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+          <%= f.select :race_tip_6, [[@drivers[0].name, @drivers[0].id],
+                                    [@drivers[1].name, @drivers[1].id],
+                                    [@drivers[2].name, @drivers[2].id],
+                                    [@drivers[3].name, @drivers[3].id],
+                                    [@drivers[4].name, @drivers[4].id],
+                                    [@drivers[5].name, @drivers[5].id],
+                                    [@drivers[6].name, @drivers[6].id],
+                                    [@drivers[7].name, @drivers[7].id],
+                                    [@drivers[8].name, @drivers[8].id],
+                                    [@drivers[9].name, @drivers[9].id],
+                                    [@drivers[10].name, @drivers[10].id],
+                                    [@drivers[11].name, @drivers[11].id],
+                                    [@drivers[12].name, @drivers[12].id],
+                                    [@drivers[13].name, @drivers[13].id],
+                                    [@drivers[14].name, @drivers[14].id],
+                                    [@drivers[15].name, @drivers[15].id],
+                                    [@drivers[16].name, @drivers[16].id],
+                                    [@drivers[17].name, @drivers[17].id],
+                                    [@drivers[18].name, @drivers[18].id],
+                                    [@drivers[19].name, @drivers[19].id],
+                                    [@drivers[20].name, @drivers[20].id]], {}, class: 'form-control' %>
         </div>
           <div class="form-group">
           <%= f.label 'Seventh' %>
-          <%= f.select :race_tip_7, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+          <%= f.select :race_tip_7, [[@drivers[0].name, @drivers[0].id],
+                                    [@drivers[1].name, @drivers[1].id],
+                                    [@drivers[2].name, @drivers[2].id],
+                                    [@drivers[3].name, @drivers[3].id],
+                                    [@drivers[4].name, @drivers[4].id],
+                                    [@drivers[5].name, @drivers[5].id],
+                                    [@drivers[6].name, @drivers[6].id],
+                                    [@drivers[7].name, @drivers[7].id],
+                                    [@drivers[8].name, @drivers[8].id],
+                                    [@drivers[9].name, @drivers[9].id],
+                                    [@drivers[10].name, @drivers[10].id],
+                                    [@drivers[11].name, @drivers[11].id],
+                                    [@drivers[12].name, @drivers[12].id],
+                                    [@drivers[13].name, @drivers[13].id],
+                                    [@drivers[14].name, @drivers[14].id],
+                                    [@drivers[15].name, @drivers[15].id],
+                                    [@drivers[16].name, @drivers[16].id],
+                                    [@drivers[17].name, @drivers[17].id],
+                                    [@drivers[18].name, @drivers[18].id],
+                                    [@drivers[19].name, @drivers[19].id],
+                                    [@drivers[20].name, @drivers[20].id]], {}, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label 'Eighth' %>
-          <%= f.select :race_tip_8, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+          <%= f.select :race_tip_8, [[@drivers[0].name, @drivers[0].id],
+                                    [@drivers[1].name, @drivers[1].id],
+                                    [@drivers[2].name, @drivers[2].id],
+                                    [@drivers[3].name, @drivers[3].id],
+                                    [@drivers[4].name, @drivers[4].id],
+                                    [@drivers[5].name, @drivers[5].id],
+                                    [@drivers[6].name, @drivers[6].id],
+                                    [@drivers[7].name, @drivers[7].id],
+                                    [@drivers[8].name, @drivers[8].id],
+                                    [@drivers[9].name, @drivers[9].id],
+                                    [@drivers[10].name, @drivers[10].id],
+                                    [@drivers[11].name, @drivers[11].id],
+                                    [@drivers[12].name, @drivers[12].id],
+                                    [@drivers[13].name, @drivers[13].id],
+                                    [@drivers[14].name, @drivers[14].id],
+                                    [@drivers[15].name, @drivers[15].id],
+                                    [@drivers[16].name, @drivers[16].id],
+                                    [@drivers[17].name, @drivers[17].id],
+                                    [@drivers[18].name, @drivers[18].id],
+                                    [@drivers[19].name, @drivers[19].id],
+                                    [@drivers[20].name, @drivers[20].id]], {}, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label 'Ninth' %>
-          <%= f.select :race_tip_9, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+          <%= f.select :race_tip_9, [[@drivers[0].name, @drivers[0].id],
+                                    [@drivers[1].name, @drivers[1].id],
+                                    [@drivers[2].name, @drivers[2].id],
+                                    [@drivers[3].name, @drivers[3].id],
+                                    [@drivers[4].name, @drivers[4].id],
+                                    [@drivers[5].name, @drivers[5].id],
+                                    [@drivers[6].name, @drivers[6].id],
+                                    [@drivers[7].name, @drivers[7].id],
+                                    [@drivers[8].name, @drivers[8].id],
+                                    [@drivers[9].name, @drivers[9].id],
+                                    [@drivers[10].name, @drivers[10].id],
+                                    [@drivers[11].name, @drivers[11].id],
+                                    [@drivers[12].name, @drivers[12].id],
+                                    [@drivers[13].name, @drivers[13].id],
+                                    [@drivers[14].name, @drivers[14].id],
+                                    [@drivers[15].name, @drivers[15].id],
+                                    [@drivers[16].name, @drivers[16].id],
+                                    [@drivers[17].name, @drivers[17].id],
+                                    [@drivers[18].name, @drivers[18].id],
+                                    [@drivers[19].name, @drivers[19].id],
+                                    [@drivers[20].name, @drivers[20].id]], {}, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label 'Tenth' %>
-          <%= f.select :race_tip_10, [['Hamilton', 1], ['Rosberg', 2]], {}, class: 'form-control' %>
+          <%= f.select :race_tip_10, [[@drivers[0].name, @drivers[0].id],
+                                    [@drivers[1].name, @drivers[1].id],
+                                    [@drivers[2].name, @drivers[2].id],
+                                    [@drivers[3].name, @drivers[3].id],
+                                    [@drivers[4].name, @drivers[4].id],
+                                    [@drivers[5].name, @drivers[5].id],
+                                    [@drivers[6].name, @drivers[6].id],
+                                    [@drivers[7].name, @drivers[7].id],
+                                    [@drivers[8].name, @drivers[8].id],
+                                    [@drivers[9].name, @drivers[9].id],
+                                    [@drivers[10].name, @drivers[10].id],
+                                    [@drivers[11].name, @drivers[11].id],
+                                    [@drivers[12].name, @drivers[12].id],
+                                    [@drivers[13].name, @drivers[13].id],
+                                    [@drivers[14].name, @drivers[14].id],
+                                    [@drivers[15].name, @drivers[15].id],
+                                    [@drivers[16].name, @drivers[16].id],
+                                    [@drivers[17].name, @drivers[17].id],
+                                    [@drivers[18].name, @drivers[18].id],
+                                    [@drivers[19].name, @drivers[19].id],
+                                    [@drivers[20].name, @drivers[20].id]], {}, class: 'form-control' %>
         </div>
       </div>
     </div>
+
+    <%= hidden_field_tag(:round_id, params[:round_id]) %>
     <%= f.submit 'Save', class: 'btn btn-wadda-bewdy' %>
   </div>
 <% end %>

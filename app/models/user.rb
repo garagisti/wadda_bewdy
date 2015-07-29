@@ -6,4 +6,9 @@ class User < ActiveRecord::Base
 
   has_many :tips
 
+
+  def has_tipped?(round_id)
+    !Tip.where("user_id = ? AND round_id = ?",id,round_id).first.nil?
+  end
+
 end

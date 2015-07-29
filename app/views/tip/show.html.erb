@@ -1,0 +1,111 @@
+<div class="container-fluid">
+  <h1 class="page-header">Tip Results</h1>
+  <p>Your Tip Results for <%= @round.circuit_name(@round.circuit_id) %></p>
+
+    <div class="panel panel-default col-md-8">
+      <div class="panel-heading">
+        <h3 class="panel-title">Qualy Results</h3>
+      </div>
+      <div class="panel-body">
+        <div class="table-responsive">
+          <table class="table table-striped" role="grid">
+            <thead>
+              <tr>
+                <th>Position</th>
+                <th>Driver Name</th>
+                <th>Points</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>Pole</td>
+                  <td><%= @qly_tips[:pole].name %></td>
+                  <td>points</td>
+                </tr>
+                 <tr>
+                  <td>Second</td>
+                  <td><%= @qly_tips[:second].name %></td>
+                  <td>points</td>
+                </tr>
+                <tr>
+                  <td>Third</td>
+                  <td><%= @qly_tips[:third].name %></td>
+                  <td>points</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default col-md-8">
+      <div class="panel-heading">
+        <h3 class="panel-title">Race Results</h3>
+      </div>
+      <div class="panel-body">
+        <div class="table-responsive ">
+          <table class="table table-striped" role="grid">
+            <thead>
+              <tr>
+                <th>Position</th>
+                <th>Driver Name</th>
+                <th>Points</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>Winner</td>
+                  <td><%= @race_tips[:winner].name %></td>
+                  <td>points</td>
+                </tr>
+                 <tr>
+                  <td>Second</td>
+                  <td><%= @race_tips[:second].name %></td>
+                  <td>points</td>
+                </tr>
+                <tr>
+                  <td>Third</td>
+                  <td><%= @race_tips[:third].name %></td>
+                  <td>points</td>
+                </tr>
+                <tr>
+                  <td>Fourth</td>
+                  <td><%= @race_tips[:fourth].name %></td>
+                  <td>points</td>
+                </tr>
+                <tr>
+                  <td>Fifth</td>
+                  <td><%= @race_tips[:fifth].name %></td>
+                  <td>points</td>
+                </tr>
+                <tr>
+                  <td>Sixth</td>
+                  <td><%= @race_tips[:sixth].name %></td>
+                  <td>points</td>
+                </tr>
+                <tr>
+                  <td>Seventh</td>
+                  <td><%= @race_tips[:seventh].name %></td>
+                  <td>points</td>
+                </tr>
+                <tr>
+                  <td>Eighth</td>
+                  <td><%= @race_tips[:eighth].name %></td>
+                  <td>points</td>
+                </tr>
+                <tr>
+                  <td>Ninth</td>
+                  <td><%= @race_tips[:ninth].name %></td>
+                  <td>points</td>
+                </tr>
+                <tr>
+                  <td>Tenth</td>
+                  <td><%= @race_tips[:tenth].name %></td>
+                  <td>points</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+</div>
+<a href="#" class="btn btn-wadda-bewdy">Update Points</a>

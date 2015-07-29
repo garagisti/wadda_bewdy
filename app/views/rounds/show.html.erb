@@ -1,11 +1,7 @@
 <div class="page-header">
-  <h1>
-    <%= @circuit.name %>
-    <small>
-      Locality: <%= @circuit.locality %>,
-      Country: <%= @circuit.country %>
-      Qualy Date: <%= @rounds.qly_datetime %>
-      Race Date: <%= @rounds.race_datetime %>
-    </small>
-  </h1>
+  <h1><%= @circuit.name %></h1>
+      <h2>Country: <%= @circuit.country %></h2>
+      <h3>Locality: <small><%= @circuit.locality %></small><h3>
+      <h3>Qualy Date: <small><%= @rounds.qly_datetime.getlocal %></small></h3>
+      <h3>Race Date: <small><%= @rounds.race_datetime.getlocal %></small></h3>
 </div>
