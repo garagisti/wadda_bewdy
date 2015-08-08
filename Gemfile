@@ -27,6 +27,8 @@ group :development, :test do
   gem 'spring',             '1.1.3'
   gem 'sqlite3',            '~> 1.3'
   gem 'web-console',        '~> 2.0.0.beta3'
+  gem 'rspec-rails',        '~> 3.2'
+  gem 'shoulda-matchers',   '~> 2.8'
 end
 
 group :test do
