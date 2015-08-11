@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Universally inclusive gems for the application
 
 
@@ -24,6 +23,7 @@ gem 'uglifier',              '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug',             '3.4.0'
+  gem 'factory_girl_rails', '~> 4.2'
   gem 'spring',             '1.1.3'
   gem 'sqlite3',            '~> 1.3'
   gem 'web-console',        '~> 2.0.0.beta3'
