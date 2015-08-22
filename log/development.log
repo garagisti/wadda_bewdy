@@ -30313,3 +30313,37 @@ Processing by RoundsController#index as HTML
   Rendered shared/_nav.html.erb (0.9ms)
   Rendered shared/_flash.html.erb (0.3ms)
 Completed 200 OK in 30338ms (Views: 30318.1ms | ActiveRecord: 14.5ms)
+  [1m[36mRound Load (9.9ms)[0m  [1mSELECT "rounds".* FROM "rounds"[0m
+  [1m[36mRound Load (2.6ms)[0m  [1mSELECT "rounds".* FROM "rounds"[0m
+  [1m[36mRound Load (11.4ms)[0m  [1mSELECT "rounds".* FROM "rounds"[0m
+  [1m[35mRaceResult Load (2.5ms)[0m  SELECT "race_results".* FROM "race_results"
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "race_results"[0m
+  [1m[35mRound Load (0.2ms)[0m  SELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mRound Load (0.1ms)[0m  [1mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mRound Load (0.1ms)[0m  SELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mRound Load (0.1ms)[0m  [1mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mRound Load (0.2ms)[0m  SELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mRaceResult Load (0.3ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 10]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 10]]
+  [1m[36mRaceResult Load (0.2ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 1]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 2]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 3]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 4]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 5]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 6]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 7]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 8]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 9]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 10]]
+  [1m[36mRaceResult Load (0.2ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 1]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 2]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 3]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 4]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 5]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 6]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 7]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 8]]
+  [1m[36mRaceResult Load (0.1ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 9]]
+  [1m[35mRaceResult Load (0.1ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 10]]
+  [1m[36mRaceResult Load (1.3ms)[0m  [1mSELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1[0m  [["round_id", 9]]
+  [1m[35mRaceResult Load (0.2ms)[0m  SELECT  "race_results".* FROM "race_results" WHERE "race_results"."round_id" = ? LIMIT 1  [["round_id", 9]]
