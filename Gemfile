@@ -7,7 +7,7 @@ source 'https://rubygems.org'
 
 gem 'bcrypt',                '~> 3.1.7'
 gem 'coffee-rails',          '~> 4.1'
-gem 'devise',                '~> 3.5'
+gem 'devise',                '~> 4.6.0'
 gem 'google-webfonts-rails', '~> 0.0.4'
 gem 'jbuilder',              '~> 2.0'
 gem 'jquery-rails',          '~> 4.0'
